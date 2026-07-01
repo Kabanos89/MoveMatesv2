@@ -1,0 +1,1753 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoveMates by Nelly | Hundetraining, Personal Coaching & Beratung</title>
+  <meta name="description" content="MoveMates verbindet Hundetraining, Personal Coaching und Beratung. Mobil, persönlich und ganzheitlich für Mensch und Hund in Paderborn und Umgebung.">
+  <meta name="theme-color" content="#343b2b">
+  <meta property="og:title" content="MoveMates by Nelly">
+  <meta property="og:description" content="Hundetraining, Personal Coaching und Beratung. Mit Herz. Mit Wissen. Mit Perspektive.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo-card.jpg">
+  <link rel="preload" as="image" href="assets/logo-card.jpg">
+  <style>
+    /*
+      MoveMates Homepage, Single-File-Version
+      ---------------------------------------------------------
+      Anpassungen:
+      1. Texte direkt im HTML ändern.
+      2. Bilder im Ordner /assets austauschen.
+      3. Telefonnummer und Mail im HTML suchen: 0152 / info@move-mates.de.
+      4. Für echte Terminbuchung später Calendly, Microsoft Bookings oder ein Formular-Backend einbauen.
+    */
+
+    :root {
+      --green: #5f7c36;
+      --green-deep: #343b2b;
+      --green-dark: #202619;
+      --green-soft: #dbe8c5;
+      --beige: #f3e7d8;
+      --beige-2: #fbf5ec;
+      --gold: #c8aa72;
+      --ink: #191a16;
+      --muted: #676b5f;
+      --line: rgba(52, 59, 43, .16);
+      --glass: rgba(255,255,255,.68);
+      --glass-dark: rgba(32, 38, 25, .76);
+      --shadow: 0 24px 80px rgba(32, 38, 25, .16);
+      --shadow-soft: 0 18px 55px rgba(32, 38, 25, .10);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: light;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(200, 170, 114, .22), transparent 34rem),
+        radial-gradient(circle at top right, rgba(95, 124, 54, .18), transparent 32rem),
+        linear-gradient(180deg, var(--beige-2), #fffaf3 42%, #f5eadb 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(52, 59, 43, .055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(52, 59, 43, .055) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 64%);
+      z-index: -3;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 34rem;
+      height: 34rem;
+      right: -16rem;
+      top: 14rem;
+      background: radial-gradient(circle, rgba(95,124,54,.20), transparent 67%);
+      filter: blur(10px);
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .page-shell { min-height: 100vh; }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: .8rem;
+      padding: .8rem 1rem;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--green-dark);
+      transform: translateY(-150%);
+      z-index: 999;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(251,245,236,.76);
+      border-bottom: 1px solid rgba(52,59,43,.10);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: .9rem 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .72rem;
+      min-width: fit-content;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,.30), transparent 28%),
+        linear-gradient(135deg, var(--green), var(--green-dark));
+      box-shadow: 0 12px 28px rgba(52,59,43,.22);
+      font-weight: 900;
+      letter-spacing: -.08em;
+    }
+
+    .brand-name {
+      display: grid;
+      line-height: 1.05;
+    }
+
+    .brand-name strong {
+      font-size: 1rem;
+      letter-spacing: -.03em;
+    }
+
+    .brand-name span {
+      color: var(--muted);
+      font-size: .78rem;
+      letter-spacing: .02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: .66rem .86rem;
+      border-radius: 999px;
+      color: rgba(25,26,22,.74);
+      font-size: .94rem;
+      transition: .22s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.is-active {
+      color: var(--ink);
+      background: rgba(95,124,54,.10);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      padding: .78rem 1rem;
+      border-radius: 999px;
+      background: var(--green-dark);
+      color: #fff;
+      box-shadow: 0 14px 34px rgba(32,38,25,.18);
+      transition: .22s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover { transform: translateY(-1px); background: #141910; }
+
+    .mobile-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.58);
+      color: var(--green-dark);
+    }
+
+    .mobile-toggle span,
+    .mobile-toggle::before,
+    .mobile-toggle::after {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      border-radius: 2px;
+      background: currentColor;
+      transition: .22s ease;
+    }
+
+    .mobile-toggle[aria-expanded="true"]::before { transform: translateY(6px) rotate(45deg); }
+    .mobile-toggle[aria-expanded="true"]::after { transform: translateY(-6px) rotate(-45deg); }
+    .mobile-toggle[aria-expanded="true"] span { opacity: 0; }
+
+    .section {
+      padding: 5.6rem 1.1rem;
+      position: relative;
+    }
+
+    .section-tight { padding-top: 3.2rem; }
+
+    .container {
+      width: min(100%, var(--max));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      min-height: 34px;
+      padding: .34rem .76rem;
+      border: 1px solid rgba(95,124,54,.20);
+      border-radius: 999px;
+      color: var(--green-dark);
+      background: rgba(255,255,255,.62);
+      font-size: .84rem;
+      font-weight: 760;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: .5rem;
+      height: .5rem;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 6px rgba(95,124,54,.13);
+    }
+
+    .hero {
+      padding: 5.2rem 1.1rem 3rem;
+      min-height: calc(100vh - 74px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: clip;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 53%;
+      width: 74vw;
+      max-width: 980px;
+      aspect-ratio: 1;
+      transform: translate(-4%, -50%);
+      border: 1px solid rgba(52,59,43,.12);
+      border-radius: 999px;
+      background:
+        conic-gradient(from 180deg, transparent 0 23%, rgba(95,124,54,.14) 25%, transparent 33% 66%, rgba(200,170,114,.18) 72%, transparent 80%),
+        radial-gradient(circle, rgba(255,255,255,.35), transparent 62%);
+      filter: blur(.1px);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      width: min(100%, var(--max));
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(340px, .86fr);
+      align-items: center;
+      gap: clamp(2rem, 5vw, 5rem);
+    }
+
+    .hero-copy h1 {
+      margin: 1.25rem 0 1rem;
+      max-width: 860px;
+      font-size: clamp(3.15rem, 8vw, 7.4rem);
+      line-height: .89;
+      letter-spacing: -.08em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(120deg, var(--green-dark), var(--green), var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-lead {
+      max-width: 680px;
+      margin: 0 0 1.65rem;
+      color: rgba(25,26,22,.74);
+      font-size: clamp(1.05rem, 2vw, 1.34rem);
+      line-height: 1.65;
+    }
+
+    .hero-actions,
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .85rem;
+      align-items: center;
+    }
+
+    .btn {
+      --btn-bg: var(--green-dark);
+      --btn-fg: #fff;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .65rem;
+      padding: .85rem 1.12rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: var(--btn-fg);
+      background: var(--btn-bg);
+      box-shadow: 0 15px 34px rgba(32,38,25,.18);
+      font-weight: 800;
+      transition: .22s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 20px 44px rgba(32,38,25,.22); }
+    .btn.secondary { --btn-bg: rgba(255,255,255,.70); --btn-fg: var(--green-dark); border-color: rgba(52,59,43,.14); box-shadow: none; }
+    .btn.ghost { --btn-bg: transparent; --btn-fg: var(--green-dark); border-color: rgba(52,59,43,.18); box-shadow: none; }
+    .btn.gold { --btn-bg: linear-gradient(135deg, #d2b77d, #a9853f); --btn-fg: #201a0d; }
+
+    .hero-trust {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .7rem;
+      max-width: 680px;
+    }
+
+    .trust-pill {
+      padding: .9rem;
+      border: 1px solid rgba(52,59,43,.12);
+      border-radius: 20px;
+      background: rgba(255,255,255,.55);
+      backdrop-filter: blur(10px);
+    }
+
+    .trust-pill strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: -.02em;
+    }
+
+    .trust-pill span {
+      display: block;
+      margin-top: .2rem;
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.35;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 610px;
+    }
+
+    .device-card {
+      position: absolute;
+      inset: 3rem 0 auto auto;
+      width: min(100%, 470px);
+      border: 1px solid rgba(255,255,255,.56);
+      border-radius: 38px;
+      background: linear-gradient(180deg, rgba(255,255,255,.74), rgba(255,255,255,.38));
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transform: rotate(1.2deg);
+    }
+
+    .device-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .9rem .95rem;
+      border-bottom: 1px solid rgba(52,59,43,.10);
+      background: rgba(255,255,255,.48);
+    }
+
+    .traffic { display: flex; gap: .35rem; }
+    .traffic i { width: 10px; height: 10px; border-radius: 50%; background: rgba(52,59,43,.18); }
+    .device-top span { color: var(--muted); font-size: .8rem; }
+
+    .brand-shot {
+      margin: 1rem;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(52,59,43,.10);
+      box-shadow: 0 16px 40px rgba(32,38,25,.12);
+    }
+
+    .insight-panel {
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 26px;
+      background: var(--green-dark);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .insight-panel::before {
+      content: "";
+      position: absolute;
+      inset: -60% -30% auto auto;
+      width: 230px;
+      height: 230px;
+      background: radial-gradient(circle, rgba(200,170,114,.42), transparent 65%);
+    }
+
+    .insight-title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: .75rem;
+    }
+
+    .insight-title strong { letter-spacing: -.02em; }
+    .status-dot { display: inline-flex; align-items: center; gap: .35rem; font-size: .78rem; color: rgba(255,255,255,.76); }
+    .status-dot::before { content:""; width:.48rem; height:.48rem; border-radius:50%; background:#b7d98d; box-shadow: 0 0 0 7px rgba(183,217,141,.14); }
+
+    .metric-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .6rem;
+    }
+
+    .metric {
+      min-height: 104px;
+      padding: .82rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .metric b { display:block; font-size:1.42rem; letter-spacing:-.04em; }
+    .metric span { display:block; margin-top:.35rem; color:rgba(255,255,255,.68); font-size:.78rem; line-height:1.32; }
+
+    .floating-card {
+      position: absolute;
+      left: 0;
+      bottom: 3.5rem;
+      width: min(100%, 330px);
+      padding: 1rem;
+      border-radius: 28px;
+      border: 1px solid rgba(52,59,43,.12);
+      background: rgba(255,255,255,.76);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
+      z-index: 2;
+    }
+
+    .floating-card h3 { margin: 0 0 .45rem; letter-spacing: -.04em; }
+    .floating-card p { margin: 0; color: var(--muted); line-height: 1.55; }
+
+    .pulse-line {
+      margin-top: .9rem;
+      height: 46px;
+      border-radius: 16px;
+      background:
+        linear-gradient(90deg, transparent 0 8%, rgba(95,124,54,.28) 8% 9%, transparent 9% 17%, rgba(95,124,54,.60) 17% 19%, transparent 19% 28%, rgba(200,170,114,.70) 28% 31%, transparent 31% 48%, rgba(95,124,54,.42) 48% 50%, transparent 50% 100%),
+        linear-gradient(180deg, rgba(95,124,54,.10), rgba(95,124,54,.04));
+      background-size: 220% 100%, 100% 100%;
+      animation: scan 5s linear infinite;
+    }
+
+    @keyframes scan { to { background-position: -220% 0, 0 0; } }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .86fr) minmax(280px, .44fr);
+      gap: 2rem;
+      align-items: end;
+      margin-bottom: 2rem;
+    }
+
+    .section-head h2 {
+      margin: 1rem 0 0;
+      font-size: clamp(2.15rem, 4.8vw, 4.55rem);
+      line-height: .98;
+      letter-spacing: -.065em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .logos-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .strip-card {
+      padding: 1.1rem;
+      min-height: 132px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.56);
+      border: 1px solid rgba(52,59,43,.10);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .strip-card::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      right: -54px;
+      top: -46px;
+      background: radial-gradient(circle, rgba(95,124,54,.18), transparent 70%);
+    }
+
+    .strip-card small { color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-weight: 800; }
+    .strip-card strong { font-size: 1.2rem; letter-spacing: -.03em; }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .service-card {
+      padding: 1.35rem;
+      min-height: 360px;
+      border-radius: 30px;
+      border: 1px solid rgba(52,59,43,.12);
+      background: rgba(255,255,255,.68);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      transition: .24s ease;
+    }
+
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+    .service-card.featured {
+      background: linear-gradient(160deg, rgba(32,38,25,.94), rgba(52,59,43,.88));
+      color: #fff;
+    }
+
+    .service-card.featured p,
+    .service-card.featured li { color: rgba(255,255,255,.72); }
+    .service-card.featured .icon-box { background: rgba(255,255,255,.10); color: #e6d3a5; border-color: rgba(255,255,255,.14); }
+
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      color: var(--green);
+      background: rgba(95,124,54,.10);
+      border: 1px solid rgba(95,124,54,.14);
+      margin-bottom: 1rem;
+    }
+
+    .icon-box svg { width: 30px; height: 30px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    .service-card h3 { margin: 0 0 .65rem; font-size: 1.55rem; letter-spacing: -.045em; }
+    .service-card p { margin: 0 0 1rem; color: var(--muted); line-height: 1.62; }
+    .clean-list { padding: 0; margin: 1rem 0 0; list-style: none; display: grid; gap: .55rem; }
+    .clean-list li { color: var(--muted); line-height: 1.45; display: flex; gap: .55rem; }
+    .clean-list li::before { content: ""; flex: 0 0 .48rem; width:.48rem; height:.48rem; margin-top:.48rem; border-radius:50%; background: var(--gold); }
+
+    .method {
+      border-radius: 42px;
+      background:
+        linear-gradient(135deg, rgba(32,38,25,.95), rgba(52,59,43,.90)),
+        radial-gradient(circle at top right, rgba(200,170,114,.22), transparent 36rem);
+      color: #fff;
+      padding: clamp(1.4rem, 4vw, 2.2rem);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .method::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(circle at top right, #000, transparent 70%);
+      pointer-events: none;
+    }
+
+    .method-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .method-copy {
+      padding: 1.2rem;
+    }
+
+    .method-copy h2 {
+      margin: 1rem 0;
+      font-size: clamp(2rem, 4.4vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -.06em;
+    }
+
+    .method-copy p { color: rgba(255,255,255,.72); line-height: 1.7; margin-bottom: 1.4rem; }
+
+    .method-board {
+      display: grid;
+      gap: .8rem;
+    }
+
+    .step-card {
+      display: grid;
+      grid-template-columns: 68px 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.075);
+      backdrop-filter: blur(12px);
+    }
+
+    .step-no {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: var(--green-dark);
+      background: linear-gradient(135deg, #f4dfad, #c8aa72);
+    }
+
+    .step-card h3 { margin: 0 0 .25rem; letter-spacing: -.03em; }
+    .step-card p { margin: 0; color: rgba(255,255,255,.66); line-height: 1.45; }
+    .step-tag { color: rgba(255,255,255,.62); font-size: .82rem; border:1px solid rgba(255,255,255,.14); padding:.38rem .62rem; border-radius:999px; }
+
+    .tabs-wrap {
+      display: grid;
+      grid-template-columns: 330px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .tab-list {
+      padding: .8rem;
+      border: 1px solid rgba(52,59,43,.12);
+      border-radius: 30px;
+      background: rgba(255,255,255,.60);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: .55rem;
+      align-content: start;
+    }
+
+    .tab-button {
+      border: 0;
+      border-radius: 22px;
+      padding: 1rem;
+      text-align: left;
+      background: transparent;
+      color: var(--ink);
+      display: grid;
+      gap: .2rem;
+      transition: .2s ease;
+    }
+
+    .tab-button strong { letter-spacing: -.03em; font-size: 1rem; }
+    .tab-button span { color: var(--muted); font-size: .88rem; line-height: 1.35; }
+    .tab-button[aria-selected="true"] { background: var(--green-dark); color: #fff; box-shadow: 0 14px 34px rgba(32,38,25,.18); }
+    .tab-button[aria-selected="true"] span { color: rgba(255,255,255,.70); }
+
+    .tab-panel {
+      display: none;
+      min-height: 478px;
+      padding: clamp(1.2rem, 3vw, 2rem);
+      border: 1px solid rgba(52,59,43,.12);
+      border-radius: 34px;
+      background: rgba(255,255,255,.70);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .tab-panel.is-visible { display: grid; grid-template-columns: 1fr .78fr; gap: 1.4rem; align-items: center; }
+    .tab-panel::after {
+      content:"";
+      position:absolute;
+      right:-12rem;
+      bottom:-12rem;
+      width:28rem;
+      height:28rem;
+      border-radius:50%;
+      background: radial-gradient(circle, rgba(95,124,54,.15), transparent 68%);
+    }
+
+    .tab-content { position: relative; z-index: 1; }
+    .tab-content h3 { margin: 0 0 .7rem; font-size: clamp(1.8rem, 3vw, 3rem); line-height: 1; letter-spacing: -.055em; }
+    .tab-content p { color: var(--muted); line-height: 1.7; margin: 0 0 1rem; }
+    .offer-points { display: grid; gap: .7rem; margin-top: 1.2rem; }
+    .offer-point { padding: .8rem .9rem; border-radius: 18px; background: rgba(95,124,54,.08); color: var(--green-dark); font-weight: 750; }
+
+    .tab-visual {
+      position: relative;
+      z-index: 1;
+      min-height: 320px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at top left, rgba(200,170,114,.30), transparent 38%),
+        linear-gradient(145deg, rgba(32,38,25,.94), rgba(52,59,43,.82));
+      color: #fff;
+      padding: 1rem;
+      overflow: hidden;
+      display: grid;
+      align-content: end;
+    }
+
+    .tab-visual::before {
+      content:"";
+      position:absolute;
+      inset: 1rem;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 24px;
+    }
+
+    .visual-stat {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .6rem;
+    }
+
+    .visual-stat div {
+      padding: .85rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+
+    .visual-stat b { display:block; font-size: 1.25rem; }
+    .visual-stat span { display:block; margin-top:.25rem; color:rgba(255,255,255,.64); font-size:.78rem; line-height:1.35; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .86fr 1.14fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .about-card {
+      padding: 1.25rem;
+      border-radius: 34px;
+      background: rgba(255,255,255,.68);
+      border: 1px solid rgba(52,59,43,.12);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .portrait-placeholder {
+      min-height: 520px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.52)),
+        url("assets/logo-card.jpg") center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portrait-note {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      padding: 1rem;
+      border-radius: 22px;
+      color: #fff;
+      background: rgba(32,38,25,.78);
+      backdrop-filter: blur(12px);
+    }
+
+    .portrait-note strong { display:block; margin-bottom:.25rem; }
+    .portrait-note span { color:rgba(255,255,255,.72); line-height:1.5; }
+
+    .about-copy h2 {
+      margin: .8rem 0 1rem;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1;
+      letter-spacing: -.06em;
+    }
+
+    .about-copy p { color: var(--muted); line-height: 1.75; font-size: 1.03rem; }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .8rem;
+      margin-top: 1.2rem;
+    }
+
+    .fact {
+      padding: 1rem;
+      border-radius: 22px;
+      background: rgba(95,124,54,.08);
+      border: 1px solid rgba(95,124,54,.12);
+    }
+
+    .fact strong { display:block; letter-spacing:-.03em; margin-bottom:.25rem; }
+    .fact span { color: var(--muted); line-height: 1.45; font-size:.92rem; }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .booking-aside,
+    .booking-form {
+      border-radius: 34px;
+      border: 1px solid rgba(52,59,43,.12);
+      background: rgba(255,255,255,.68);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .booking-aside {
+      padding: 1.4rem;
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .booking-aside h3,
+    .booking-form h3 { margin: 0; font-size: 1.6rem; letter-spacing:-.045em; }
+    .booking-aside p { margin: 0; color: var(--muted); line-height: 1.65; }
+
+    .booking-card {
+      padding: 1rem;
+      border-radius: 24px;
+      background: var(--green-dark);
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .booking-card::after {
+      content:"";
+      position:absolute;
+      right:-5rem;
+      top:-5rem;
+      width:12rem;
+      height:12rem;
+      border-radius:50%;
+      background: radial-gradient(circle, rgba(200,170,114,.38), transparent 70%);
+    }
+
+    .booking-card strong { display:block; margin-bottom:.35rem; }
+    .booking-card span { display:block; color:rgba(255,255,255,.68); line-height:1.45; }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .85rem;
+      border-radius: 18px;
+      background: rgba(95,124,54,.08);
+      color: var(--green-dark);
+      font-weight: 780;
+    }
+
+    .contact-line i {
+      width: 36px;
+      height: 36px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: rgba(95,124,54,.13);
+      font-style: normal;
+    }
+
+    .booking-form {
+      padding: 1.4rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .9rem;
+      margin-top: 1rem;
+    }
+
+    .field { display: grid; gap: .4rem; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-weight: 800; color: var(--green-dark); font-size: .9rem; }
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid rgba(52,59,43,.16);
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      color: var(--ink);
+      padding: .92rem 1rem;
+      outline: none;
+      transition: .18s ease;
+    }
+
+    .field textarea { min-height: 148px; resize: vertical; }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus { border-color: rgba(95,124,54,.70); box-shadow: 0 0 0 4px rgba(95,124,54,.13); }
+
+    .form-note {
+      margin: .9rem 0 0;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.5;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .quote-card {
+      padding: 1.2rem;
+      min-height: 260px;
+      border-radius: 30px;
+      border: 1px solid rgba(52,59,43,.12);
+      background: rgba(255,255,255,.64);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .quote-card p { margin: 0; color: var(--muted); line-height: 1.7; font-size: 1.02rem; }
+    .quote-author { margin-top: 1rem; display: grid; gap:.2rem; }
+    .quote-author strong { letter-spacing:-.03em; }
+    .quote-author span { color: var(--muted); font-size:.88rem; }
+
+    .faq-list {
+      display: grid;
+      gap: .75rem;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(52,59,43,.12);
+      border-radius: 24px;
+      background: rgba(255,255,255,.68);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      padding: 1.15rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .faq-question::after {
+      content: "+";
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(95,124,54,.10);
+      color: var(--green-dark);
+      flex: 0 0 auto;
+    }
+
+    .faq-question[aria-expanded="true"]::after { content: "–"; }
+    .faq-answer { display: none; padding: 0 1.25rem 1.25rem; color: var(--muted); line-height: 1.7; }
+    .faq-answer.is-open { display: block; }
+
+    .contact-section {
+      padding-bottom: 2.2rem;
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 1rem;
+      align-items: center;
+      padding: clamp(1.2rem, 3vw, 2rem);
+      border-radius: 42px;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(200,170,114,.22), transparent 28rem),
+        linear-gradient(135deg, rgba(255,255,255,.74), rgba(255,255,255,.46));
+      border: 1px solid rgba(52,59,43,.12);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel h2 { margin: .9rem 0 1rem; font-size: clamp(2rem, 4vw, 4rem); line-height: 1; letter-spacing:-.06em; }
+    .contact-panel p { margin: 0 0 1.25rem; color: var(--muted); line-height: 1.7; }
+
+    .contact-image {
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid rgba(52,59,43,.10);
+      box-shadow: var(--shadow-soft);
+      transform: rotate(.7deg);
+    }
+
+    .footer {
+      padding: 2rem 1.1rem 2.4rem;
+      color: rgba(25,26,22,.68);
+    }
+
+    .footer-inner {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 1.3rem;
+      border-top: 1px solid rgba(52,59,43,.13);
+      font-size: .92rem;
+    }
+
+    .footer-links { display:flex; gap:.8rem; flex-wrap:wrap; }
+    .footer-links a { color: var(--green-dark); font-weight: 760; }
+
+    :focus-visible {
+      outline: 3px solid rgba(95,124,54,.82);
+      outline-offset: 4px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 1020px) {
+      .nav-links,
+      .nav-cta { display: none; }
+      .mobile-toggle { display: inline-block; }
+      .nav.is-open .nav-links {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        top: calc(100% + .6rem);
+        display: grid;
+        padding: .8rem;
+        border: 1px solid rgba(52,59,43,.12);
+        border-radius: 24px;
+        background: rgba(251,245,236,.96);
+        box-shadow: var(--shadow);
+      }
+      .nav.is-open .nav-links a { width: 100%; justify-content: center; }
+      .hero { min-height: auto; padding-top: 3.5rem; }
+      .hero-grid,
+      .section-head,
+      .method-inner,
+      .tabs-wrap,
+      .about-grid,
+      .booking-grid,
+      .contact-panel { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 560px; }
+      .device-card { inset: 1rem 0 auto auto; }
+      .floating-card { bottom: 1.5rem; }
+      .tab-panel.is-visible { grid-template-columns: 1fr; }
+      .service-grid,
+      .testimonials,
+      .logos-strip { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .section { padding: 4.4rem 1rem; }
+      .hero-copy h1 { font-size: clamp(3.2rem, 17vw, 5rem); }
+      .hero-trust { grid-template-columns: 1fr; }
+      .hero-visual { min-height: auto; display: grid; gap: 1rem; margin-top: 1.2rem; }
+      .device-card,
+      .floating-card { position: relative; inset: auto; width: 100%; transform: none; }
+      .metric-grid { grid-template-columns: 1fr; }
+      .step-card { grid-template-columns: 52px 1fr; }
+      .step-tag { grid-column: 1 / -1; width: fit-content; }
+      .facts-grid,
+      .form-grid { grid-template-columns: 1fr; }
+      .portrait-placeholder { min-height: 430px; }
+      .tab-visual { min-height: 260px; }
+      .visual-stat { grid-template-columns: 1fr; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Direkt zum Inhalt</a>
+
+  <div class="page-shell">
+    <header class="nav" id="siteNav">
+      <div class="nav-inner">
+        <a class="brand" href="#start" aria-label="MoveMates Startseite">
+          <span class="brand-mark">MM</span>
+          <span class="brand-name">
+            <strong>MoveMates</strong>
+            <span>by Nelly</span>
+          </span>
+        </a>
+
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#angebote">Angebote</a></li>
+            <li><a href="#methode">Methode</a></li>
+            <li><a href="#ueber-mich">Über Nelly</a></li>
+            <li><a href="#termin">Termin buchen</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <a class="nav-cta" href="#termin">Erstgespräch buchen</a>
+        <button class="mobile-toggle" type="button" aria-label="Menü öffnen" aria-controls="navLinks" aria-expanded="false" id="mobileToggle"><span></span></button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="start">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Mit Herz. Mit Wissen. Mit Perspektive.</span>
+            <h1>Training für <span class="gradient-text">Mensch & Hund</span>, das wirklich in den Alltag passt.</h1>
+            <p class="hero-lead">
+              MoveMates verbindet Hundetraining, Personal Coaching und Beratung zu einem modernen Coaching-Erlebnis: klar analysiert, persönlich begleitet und flexibel dort, wo du Unterstützung brauchst.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#termin">Termin anfragen</a>
+              <a class="btn secondary" href="#angebote">Angebote ansehen</a>
+              <a class="btn ghost" href="tel:+4915259702372">0152 59702372</a>
+            </div>
+            <div class="hero-trust" aria-label="Schwerpunkte">
+              <div class="trust-pill">
+                <strong>Hundetraining</strong>
+                <span>Alltag, Bindung, Orientierung und klare Kommunikation.</span>
+              </div>
+              <div class="trust-pill">
+                <strong>Personal Coaching</strong>
+                <span>Mehr Energie, Struktur und Bewegung im eigenen Tempo.</span>
+              </div>
+              <div class="trust-pill">
+                <strong>Beratung</strong>
+                <span>Individuell, mobil und lösungsorientiert für deinen Alltag.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="MoveMates Markenvorschau">
+            <div class="device-card">
+              <div class="device-top">
+                <div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>
+                <span>MoveMates Coaching System</span>
+              </div>
+              <div class="brand-shot">
+                <img src="assets/logo-card.jpg" alt="MoveMates Logo mit Mensch und Hund">
+              </div>
+              <div class="insight-panel">
+                <div class="insight-title">
+                  <strong>Smart Coaching Matrix</strong>
+                  <span class="status-dot">bereit</span>
+                </div>
+                <div class="metric-grid">
+                  <div class="metric"><b>01</b><span>Verstehen, was wirklich los ist.</span></div>
+                  <div class="metric"><b>02</b><span>Plan, der zu Mensch und Hund passt.</span></div>
+                  <div class="metric"><b>03</b><span>Begleitung mit messbarem Fortschritt.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card">
+              <h3>Ganzheitlich statt 08/15.</h3>
+              <p>Training wird erst stark, wenn Körpersprache, Alltag, Motivation und Umsetzbarkeit zusammen gedacht werden.</p>
+              <div class="pulse-line" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tight" aria-label="Kurzprofil">
+        <div class="container logos-strip">
+          <article class="strip-card">
+            <small>Ort</small>
+            <strong>Paderborn & Umgebung</strong>
+          </article>
+          <article class="strip-card">
+            <small>Format</small>
+            <strong>Einzeltraining, Beratung, Coaching</strong>
+          </article>
+          <article class="strip-card">
+            <small>Kontakt</small>
+            <strong>info@move-mates.de</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="angebote">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Angebote</span>
+              <h2>Drei Bereiche. Ein Ziel: mehr Klarheit im Alltag.</h2>
+            </div>
+            <p>
+              Die Website ist bewusst nicht als starre Preisliste gebaut, sondern als hochwertige Beratungsseite. So wirkt MoveMates persönlicher und du kannst später einzelne Pakete ergänzen.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5.5 13.5c1.7-3.2 3.9-4.8 6.5-4.8s4.8 1.6 6.5 4.8"/><path d="M8 14.5c0 2.2 1.8 4 4 4s4-1.8 4-4"/><path d="M6.2 8.2c-.8-1.1-.9-2.5-.2-3.1.7-.6 1.9-.1 2.7 1 .8 1.1.9 2.5.2 3.1-.7.6-1.9.1-2.7-1Z"/><path d="M17.8 8.2c.8-1.1.9-2.5.2-3.1-.7-.6-1.9-.1-2.7 1-.8 1.1-.9 2.5-.2 3.1.7.6 1.9.1 2.7-1Z"/></svg>
+              </div>
+              <h3>Hundetraining</h3>
+              <p>Für Mensch-Hund-Teams, die mehr Ruhe, Orientierung und Sicherheit im Alltag möchten.</p>
+              <ul class="clean-list">
+                <li>Leinenführung, Rückruf und Alltagssituationen</li>
+                <li>Kommunikation, Körpersprache und Timing</li>
+                <li>Individuelle Trainingspläne statt Standardlösung</li>
+              </ul>
+            </article>
+
+            <article class="service-card featured">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 20V9"/><path d="M17 20V9"/><path d="M5 9h14"/><path d="M8 4h8l3 5H5l3-5Z"/><path d="M10 13h4"/><path d="M10 16h4"/></svg>
+              </div>
+              <h3>Personal Coaching</h3>
+              <p>Für Menschen, die Bewegung, Körpergefühl und mentale Stärke wieder alltagstauglich aufbauen möchten.</p>
+              <ul class="clean-list">
+                <li>Training mit realistischem Plan und klarer Struktur</li>
+                <li>Motivation, Routinen und Fortschritt im Blick</li>
+                <li>Optional kombinierbar mit Hund und Outdoor-Bewegung</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12h9"/><path d="M13 7l5 5-5 5"/><path d="M4 6h11"/><path d="M4 18h11"/></svg>
+              </div>
+              <h3>Beratung</h3>
+              <p>Für alle, die eine ehrliche Einschätzung, einen nächsten Schritt oder eine Entscheidungshilfe brauchen.</p>
+              <ul class="clean-list">
+                <li>Erstgespräch und Situationsanalyse</li>
+                <li>Alltagscheck für Mensch, Hund und Umfeld</li>
+                <li>Empfehlung für Training, Coaching oder nächste Schritte</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="methode">
+        <div class="container method">
+          <div class="method-inner">
+            <div class="method-copy">
+              <span class="eyebrow">Methode</span>
+              <h2>Analyse, Plan, Umsetzung, Feedback.</h2>
+              <p>
+                Modern heißt hier nicht kühl oder kompliziert. Modern heißt: sauber beobachten, verständlich erklären und daraus einen Plan entwickeln, der im echten Leben funktioniert.
+              </p>
+              <div class="actions">
+                <a class="btn gold" href="#termin">Kennenlernen starten</a>
+              </div>
+            </div>
+            <div class="method-board">
+              <article class="step-card">
+                <div class="step-no">01</div>
+                <div>
+                  <h3>Verstehen</h3>
+                  <p>Was passiert im Alltag wirklich? Welche Auslöser, Muster und Ziele gibt es?</p>
+                </div>
+                <span class="step-tag">Analyse</span>
+              </article>
+              <article class="step-card">
+                <div class="step-no">02</div>
+                <div>
+                  <h3>Planen</h3>
+                  <p>Aus der Analyse entsteht ein klarer Fahrplan, der zu dir, deinem Hund und deinem Zeitfenster passt.</p>
+                </div>
+                <span class="step-tag">Strategie</span>
+              </article>
+              <article class="step-card">
+                <div class="step-no">03</div>
+                <div>
+                  <h3>Trainieren</h3>
+                  <p>Du bekommst konkrete Übungen, Feedback und eine verständliche Priorisierung.</p>
+                </div>
+                <span class="step-tag">Praxis</span>
+              </article>
+              <article class="step-card">
+                <div class="step-no">04</div>
+                <div>
+                  <h3>Festigen</h3>
+                  <p>Fortschritt wird überprüft, angepasst und langfristig in den Alltag übertragen.</p>
+                </div>
+                <span class="step-tag">Routine</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="details">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Aufteilung</span>
+              <h2>So könnte die Angebotsseite später als Tabs funktionieren.</h2>
+            </div>
+            <p>
+              Die Tabs machen die Seite hochwertiger und verhindern, dass Besucher von zu vielen Informationen erschlagen werden. Gleichzeitig bleibt alles auf einer Seite und ist schnell erreichbar.
+            </p>
+          </div>
+
+          <div class="tabs-wrap">
+            <div class="tab-list" role="tablist" aria-label="Angebotsdetails">
+              <button class="tab-button" role="tab" aria-selected="true" aria-controls="panel-hund" id="tab-hund" data-tab="hund">
+                <strong>Hundetraining</strong>
+                <span>Für Alltag, Orientierung und Teamgefühl.</span>
+              </button>
+              <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-coaching" id="tab-coaching" data-tab="coaching">
+                <strong>Personal Coaching</strong>
+                <span>Für Bewegung, Körpergefühl und Struktur.</span>
+              </button>
+              <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-beratung" id="tab-beratung" data-tab="beratung">
+                <strong>Beratung</strong>
+                <span>Für Klarheit, Einschätzung und nächste Schritte.</span>
+              </button>
+            </div>
+
+            <article class="tab-panel is-visible" role="tabpanel" id="panel-hund" aria-labelledby="tab-hund" data-panel="hund">
+              <div class="tab-content">
+                <h3>Hundetraining mit Blick auf das ganze Team.</h3>
+                <p>
+                  Nicht nur der Hund wird betrachtet, sondern auch Umfeld, Routinen, Körpersprache und die Frage, was im Alltag realistisch umsetzbar ist.
+                </p>
+                <div class="offer-points">
+                  <div class="offer-point">Einzeltraining vor Ort oder draußen</div>
+                  <div class="offer-point">Konkrete Hausaufgaben nach jedem Termin</div>
+                  <div class="offer-point">Fokus auf Bindung, Sicherheit und Alltag</div>
+                </div>
+              </div>
+              <div class="tab-visual" aria-hidden="true">
+                <div class="visual-stat">
+                  <div><b>Alltag</b><span>Training da, wo Verhalten entsteht.</span></div>
+                  <div><b>Team</b><span>Mensch und Hund werden zusammen gedacht.</span></div>
+                  <div><b>Plan</b><span>Klare Schritte statt Bauchgefühl.</span></div>
+                  <div><b>Feedback</b><span>Verständlich, direkt und umsetzbar.</span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="tab-panel" role="tabpanel" id="panel-coaching" aria-labelledby="tab-coaching" data-panel="coaching">
+              <div class="tab-content">
+                <h3>Personal Coaching, das nicht nach Fitnessstudio klingt.</h3>
+                <p>
+                  Ziel ist ein Körpergefühl, das im Alltag trägt. Bewegung, Routinen und Motivation werden so aufgebaut, dass sie langfristig funktionieren.
+                </p>
+                <div class="offer-points">
+                  <div class="offer-point">Körpergewicht, Outdoor oder Equipment möglich</div>
+                  <div class="offer-point">Routinen für Beruf, Alltag und Energielevel</div>
+                  <div class="offer-point">Optional kombinierbar mit Spaziergängen und Hund</div>
+                </div>
+              </div>
+              <div class="tab-visual" aria-hidden="true">
+                <div class="visual-stat">
+                  <div><b>Move</b><span>Bewegung passend zum Alltag.</span></div>
+                  <div><b>Mind</b><span>Motivation und Struktur.</span></div>
+                  <div><b>Flow</b><span>Routinen statt Druck.</span></div>
+                  <div><b>Level</b><span>Steigerung im eigenen Tempo.</span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="tab-panel" role="tabpanel" id="panel-beratung" aria-labelledby="tab-beratung" data-panel="beratung">
+              <div class="tab-content">
+                <h3>Beratung für alle, die erst Orientierung brauchen.</h3>
+                <p>
+                  Manchmal braucht es nicht sofort ein großes Paket, sondern ein gutes Gespräch, eine klare Einschätzung und einen realistischen nächsten Schritt.
+                </p>
+                <div class="offer-points">
+                  <div class="offer-point">Erstcheck für Situation, Ziel und Machbarkeit</div>
+                  <div class="offer-point">Empfehlung für Training oder Coaching</div>
+                  <div class="offer-point">Persönlich, ehrlich und ohne Verkaufsdruck</div>
+                </div>
+              </div>
+              <div class="tab-visual" aria-hidden="true">
+                <div class="visual-stat">
+                  <div><b>Check</b><span>Einordnung der Ausgangslage.</span></div>
+                  <div><b>Route</b><span>Nächster sinnvoller Schritt.</span></div>
+                  <div><b>Fit</b><span>Passendes Format finden.</span></div>
+                  <div><b>Clarity</b><span>Klarheit vor Entscheidung.</span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ueber-mich">
+        <div class="container about-grid">
+          <div class="about-card">
+            <div class="portrait-placeholder">
+              <div class="portrait-note">
+                <strong>Bildplatzhalter</strong>
+                <span>Hier später ein echtes Foto von Nelly mit Hund einsetzen. Das wirkt deutlich vertrauenswürdiger als Stockfotos.</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-card about-copy">
+            <span class="eyebrow">Über Nelly</span>
+            <h2>Nelly Christine Philipp</h2>
+            <p>
+              Ich begleite Menschen und Hunde dabei, sich gegenseitig besser zu verstehen, klarer zu kommunizieren und wieder mehr Sicherheit in ihren Alltag zu bringen. Mein Ansatz verbindet Empathie mit Struktur: ruhig, ehrlich, lösungsorientiert und immer mit Blick auf das, was im echten Leben machbar ist.
+            </p>
+            <p>
+              MoveMates steht für Bewegung, Verbindung und Entwicklung. Ob Hundetraining, Personal Coaching oder Beratung: Im Mittelpunkt steht nicht Perfektion, sondern ein Weg, der zu dir passt.
+            </p>
+            <div class="facts-grid">
+              <div class="fact">
+                <strong>Arbeitsweise</strong>
+                <span>Individuell, klar, freundlich und alltagstauglich.</span>
+              </div>
+              <div class="fact">
+                <strong>Fokus</strong>
+                <span>Beziehung, Orientierung, Routine und nachhaltige Veränderung.</span>
+              </div>
+              <div class="fact">
+                <strong>Format</strong>
+                <span>Mobil unterwegs, draußen, bei dir oder nach Absprache.</span>
+              </div>
+              <div class="fact">
+                <strong>Passend für</strong>
+                <span>Menschen, Hunde und Teams, die ehrliche Begleitung suchen.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="termin">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Termin buchen</span>
+              <h2>Erst anfragen, dann passend starten.</h2>
+            </div>
+            <p>
+              Für den Anfang reicht ein Anfrageformular per Mail. Später kannst du an dieser Stelle ein echtes Buchungssystem wie Calendly, Microsoft Bookings oder ein eigenes Formular einbauen.
+            </p>
+          </div>
+
+          <div class="booking-grid">
+            <aside class="booking-aside">
+              <h3>So läuft es ab</h3>
+              <p>Schreib kurz, worum es geht. Nelly meldet sich zurück und klärt, welches Format sinnvoll ist.</p>
+              <div class="booking-card">
+                <strong>Empfohlener Start</strong>
+                <span>20 Minuten Kennenlernen, Ziel klären, nächsten Schritt abstimmen.</span>
+              </div>
+              <a class="contact-line" href="tel:+4915259702372"><i>☎</i><span>0152 59702372</span></a>
+              <a class="contact-line" href="mailto:info@move-mates.de"><i>@</i><span>info@move-mates.de</span></a>
+              <a class="contact-line" href="https://www.move-mates.de"><i>↗</i><span>www.move-mates.de</span></a>
+            </aside>
+
+            <form class="booking-form" id="bookingForm">
+              <h3>Unverbindliche Anfrage</h3>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" autocomplete="name" required placeholder="Dein Name">
+                </div>
+                <div class="field">
+                  <label for="email">E-Mail</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required placeholder="deinname@email.de">
+                </div>
+                <div class="field">
+                  <label for="topic">Thema</label>
+                  <select id="topic" name="topic" required>
+                    <option value="">Bitte auswählen</option>
+                    <option>Hundetraining</option>
+                    <option>Personal Coaching</option>
+                    <option>Beratung</option>
+                    <option>Noch unsicher</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="phone">Telefon optional</label>
+                  <input id="phone" name="phone" autocomplete="tel" placeholder="Telefonnummer">
+                </div>
+                <div class="field full">
+                  <label for="message">Worum geht es?</label>
+                  <textarea id="message" name="message" required placeholder="Beschreibe kurz deine Situation, dein Ziel und wann du grundsätzlich Zeit hättest."></textarea>
+                </div>
+              </div>
+              <div class="actions" style="margin-top: 1rem;">
+                <button class="btn" type="submit">Anfrage per Mail erstellen</button>
+                <a class="btn secondary" href="mailto:info@move-mates.de?subject=MoveMates%20Anfrage">Direkt mailen</a>
+              </div>
+              <p class="form-note">
+                Hinweis: Dieses Demo-Formular öffnet dein E-Mail-Programm und sendet noch keine Daten an einen Server. Für eine Live-Website bitte Datenschutz, Spam-Schutz und Formularversand sauber umsetzen.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Stimmen">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Vertrauen</span>
+              <h2>Platz für echte Stimmen und Ergebnisse.</h2>
+            </div>
+            <p>
+              Sobald erste Kundinnen und Kunden Feedback geben, sollten hier echte kurze Zitate stehen. Das ist deutlich stärker als generische Werbetexte.
+            </p>
+          </div>
+          <div class="testimonials">
+            <article class="quote-card">
+              <p>„Schon nach dem ersten Termin hatten wir einen klaren Plan und wussten, worauf wir im Alltag achten müssen.“</p>
+              <div class="quote-author"><strong>Beispielstimme</strong><span>Hundetraining</span></div>
+            </article>
+            <article class="quote-card">
+              <p>„Die Kombination aus Bewegung, Struktur und persönlicher Begleitung hat mir geholfen, wieder dranzubleiben.“</p>
+              <div class="quote-author"><strong>Beispielstimme</strong><span>Personal Coaching</span></div>
+            </article>
+            <article class="quote-card">
+              <p>„Es ging nicht um Druck, sondern um realistische Schritte. Genau das hat den Unterschied gemacht.“</p>
+              <div class="quote-author"><strong>Beispielstimme</strong><span>Beratung</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">FAQ</span>
+              <h2>Fragen, die Besucher wahrscheinlich haben.</h2>
+            </div>
+            <p>Kurze Antworten nehmen Unsicherheit raus und erhöhen die Wahrscheinlichkeit, dass jemand Kontakt aufnimmt.</p>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">Wo findet das Training statt?</button>
+              <div class="faq-answer">Je nach Thema draußen, bei dir im Alltag oder an einem passenden Treffpunkt. Der konkrete Ort wird nach der Anfrage abgestimmt.</div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">Kann ich erst einmal nur beraten werden?</button>
+              <div class="faq-answer">Ja. Gerade wenn du unsicher bist, welches Angebot passt, ist ein kurzes Kennenlernen oder eine Beratung sinnvoll.</div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">Ist das Personal Coaching auch für Anfänger geeignet?</button>
+              <div class="faq-answer">Ja. Der Ansatz ist individuell und startet dort, wo du gerade stehst. Es geht nicht um Leistung um jeden Preis, sondern um nachhaltige Bewegung.</div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">Gibt es feste Pakete oder Einzeltermine?</button>
+              <div class="faq-answer">Für die erste Version der Website sind Einzeltermine und individuelle Absprachen sinnvoll. Später kannst du konkrete Pakete, Preise und Buchungsoptionen ergänzen.</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="kontakt">
+        <div class="container contact-panel">
+          <div>
+            <span class="eyebrow">Kontakt</span>
+            <h2>Bereit für den nächsten Schritt?</h2>
+            <p>
+              Melde dich kurz mit deinem Thema. MoveMates ist flexibel für dich unterwegs und findet gemeinsam mit dir den passenden Startpunkt.
+            </p>
+            <div class="actions">
+              <a class="btn" href="#termin">Anfrage senden</a>
+              <a class="btn secondary" href="mailto:info@move-mates.de">info@move-mates.de</a>
+            </div>
+          </div>
+          <div class="contact-image">
+            <img src="assets/contact-card.jpg" alt="MoveMates Kontaktinformationen Visitenkarte">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span id="year"></span> MoveMates by Nelly. Alle Rechte vorbehalten.</div>
+        <div class="footer-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="#start">Nach oben</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const nav = document.getElementById('siteNav');
+    const toggle = document.getElementById('mobileToggle');
+    const navLinks = [...document.querySelectorAll('.nav-links a')];
+
+    toggle?.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      nav.classList.toggle('is-open', !isOpen);
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const sections = navLinks
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const activeId = `#${entry.target.id}`;
+        navLinks.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === activeId));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(section => navObserver.observe(section));
+
+    const tabButtons = [...document.querySelectorAll('.tab-button')];
+    const tabPanels = [...document.querySelectorAll('.tab-panel')];
+
+    function activateTab(name) {
+      tabButtons.forEach(button => button.setAttribute('aria-selected', String(button.dataset.tab === name)));
+      tabPanels.forEach(panel => panel.classList.toggle('is-visible', panel.dataset.panel === name));
+    }
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => activateTab(button.dataset.tab));
+    });
+
+    const faqButtons = [...document.querySelectorAll('.faq-question')];
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const isOpen = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.classList.toggle('is-open', !isOpen);
+      });
+    });
+
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm?.addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(bookingForm);
+      const name = data.get('name')?.toString().trim();
+      const email = data.get('email')?.toString().trim();
+      const phone = data.get('phone')?.toString().trim();
+      const topic = data.get('topic')?.toString().trim();
+      const message = data.get('message')?.toString().trim();
+
+      if (!name || !email || !topic || !message) {
+        alert('Bitte fülle Name, E-Mail, Thema und Nachricht aus.');
+        return;
+      }
+
+      const subject = encodeURIComponent(`MoveMates Anfrage: ${topic}`);
+      const body = encodeURIComponent(
+        `Hallo Nelly,\n\nich möchte gerne einen Termin anfragen.\n\n` +
+        `Name: ${name}\n` +
+        `E-Mail: ${email}\n` +
+        `Telefon: ${phone || '-'}\n` +
+        `Thema: ${topic}\n\n` +
+        `Nachricht:\n${message}\n\n` +
+        `Viele Grüße\n${name}`
+      );
+
+      window.location.href = `mailto:info@move-mates.de?subject=${subject}&body=${body}`;
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
