@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MoveMates by Nelly | Hundetraining, Personal Coaching & Beratung</title>
-  <meta name="description" content="MoveMates verbindet Hundetraining, Personal Coaching und Beratung. Mobil, persönlich und ganzheitlich für Mensch und Hund in Paderborn und Umgebung.">
+  <title>MoveMates by Nelly | Hundetraining, Personal Coaching & Betreuung</title>
+  <meta name="description" content="MoveMates begleitet Menschen und ihre Hunde durch Hundetraining, Personal Coaching, Beratung und Betreuung. Mit Herz, Wissen und Perspektive in Paderborn und Umgebung.">
   <meta name="theme-color" content="#343b2b">
   <meta property="og:title" content="MoveMates by Nelly">
-  <meta property="og:description" content="Hundetraining, Personal Coaching und Beratung. Mit Herz. Mit Wissen. Mit Perspektive.">
+  <meta property="og:description" content="Hundetraining, Personal Coaching, Beratung und Betreuung. Mit Herz. Mit Wissen. Mit Perspektive.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/logo-card.jpg">
-  <link rel="preload" as="image" href="assets/logo-card.jpg">
+  <meta property="og:image" content="assets/MoveMates_Logo-HP.png">
+  <link rel="preload" as="image" href="assets/MoveMates_Logo-HP.png">
   <style>
     /*
       MoveMates Homepage, Single-File-Version
@@ -121,7 +121,7 @@
     .nav-inner {
       max-width: var(--max);
       margin: 0 auto;
-      padding: .9rem 1.1rem;
+      padding: .25rem 1.1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -396,6 +396,125 @@
       min-height: 610px;
     }
 
+    .hero-carousel-card {
+  position: absolute;
+  inset: 3rem 0 auto auto;
+  width: min(100%, 500px);
+  border: 1px solid rgba(255,255,255,.56);
+  border-radius: 38px;
+  background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.44));
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transform: rotate(1.2deg);
+}
+
+.hero-carousel {
+  position: relative;
+  margin: 1rem;
+  aspect-ratio: 4 / 3;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(52,59,43,.10);
+  box-shadow: 0 16px 40px rgba(32,38,25,.12);
+  background: rgba(52,59,43,.08);
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  animation: carouselFade 18s infinite;
+}
+
+.carousel-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.carousel-slide:nth-child(2) {
+  animation-delay: 6s;
+}
+
+.carousel-slide:nth-child(3) {
+  animation-delay: 12s;
+}
+
+@keyframes carouselFade {
+  0% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  41% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.carousel-caption {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 26px;
+  background: var(--green-dark);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-caption::after {
+  content: "";
+  position: absolute;
+  right: -4rem;
+  top: -4rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,170,114,.38), transparent 70%);
+}
+
+.carousel-caption span {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  margin-bottom: .45rem;
+  color: rgba(255,255,255,.64);
+  font-size: .76rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.carousel-caption h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 .45rem;
+  letter-spacing: -.04em;
+  line-height: 1.12;
+}
+
+.carousel-caption p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: rgba(255,255,255,.72);
+  line-height: 1.55;
+}
+
     .device-card {
       position: absolute;
       inset: 3rem 0 auto auto;
@@ -608,6 +727,12 @@
     }
 
     .icon-box svg { width: 30px; height: 30px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .icon-box img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      display: block;
+    }  
 
     .service-card h3 { margin: 0 0 .65rem; font-size: 1.55rem; letter-spacing: -.045em; }
     .service-card p { margin: 0 0 1rem; color: var(--muted); line-height: 1.62; }
@@ -818,7 +943,7 @@
       border-radius: 28px;
       background:
         linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.52)),
-        url("assets/logo-card.jpg") center/cover no-repeat;
+        url("assets/MoveMates_Logo-HP.png") center/cover no-repeat;
       position: relative;
       overflow: hidden;
     }
@@ -863,6 +988,33 @@
 
     .fact strong { display:block; letter-spacing:-.03em; margin-bottom:.25rem; }
     .fact span { color: var(--muted); line-height: 1.45; font-size:.92rem; }
+
+    .philosophy-card {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: clamp(1.25rem, 3vw, 2.1rem);
+      border-radius: 34px;
+      background: rgba(255,255,255,.68);
+      border: 1px solid rgba(52,59,43,.12);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .philosophy-card p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      line-height: 1.78;
+      font-size: 1.04rem;
+    }
+
+    .philosophy-card p:last-child { margin-bottom: 0; }
+
+    .philosophy-card .lead-line {
+      color: var(--ink);
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      line-height: 1.58;
+      letter-spacing: -.02em;
+      font-weight: 780;
+    }
 
     .booking-grid {
       display: grid;
@@ -1138,7 +1290,13 @@
       .hero-trust { grid-template-columns: 1fr; }
       .hero-visual { min-height: auto; display: grid; gap: 1rem; margin-top: 1.2rem; }
       .device-card,
-      .floating-card { position: relative; inset: auto; width: 100%; transform: none; }
+      .hero-carousel-card,
+      .floating-card {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        transform: none;
+      }
       .metric-grid { grid-template-columns: 1fr; }
       .step-card { grid-template-columns: 52px 1fr; }
       .step-tag { grid-column: 1 / -1; width: fit-content; }
@@ -1153,6 +1311,16 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
     }
+
+      .brand-logo-nav {
+        width: 120px;
+        height: auto;
+        max-height: 52px;
+        object-fit: contain;
+        display: block;
+        border-radius: 0;
+      }
+
   </style>
 </head>
 <body>
@@ -1162,7 +1330,7 @@
     <header class="nav" id="siteNav">
       <div class="nav-inner">
         <a class="brand" href="#start" aria-label="MoveMates Startseite">
-          <span class="brand-mark">MM</span>
+          <img class="brand-logo-nav" src="assets/MoveMates_Logo-HP.png" alt="MoveMates Logo">
           <span class="brand-name">
             <strong>MoveMates</strong>
             <span>by Nelly</span>
@@ -1191,12 +1359,11 @@
             <span class="eyebrow">Mit Herz. Mit Wissen. Mit Perspektive.</span>
             <h1>Training für <span class="gradient-text">Mensch & Hund</span>, das wirklich in den Alltag passt.</h1>
             <p class="hero-lead">
-              MoveMates verbindet Hundetraining, Personal Coaching und Beratung zu einem modernen Coaching-Erlebnis: klar analysiert, persönlich begleitet und flexibel dort, wo du Unterstützung brauchst.
+              Veränderung beginnt dort, wo Verständnis, Bewegung und Vertrauen zusammenkommen. MoveMates begleitet Menschen und ihre Hunde auf dem Weg zu einem gesunden, verständnisvollen und harmonischen Miteinander.
             </p>
             <div class="hero-actions">
               <a class="btn" href="#termin">Termin anfragen</a>
               <a class="btn secondary" href="#angebote">Angebote ansehen</a>
-              <a class="btn ghost" href="tel:+4915259702372">0152 59702372</a>
             </div>
             <div class="hero-trust" aria-label="Schwerpunkte">
               <div class="trust-pill">
@@ -1208,57 +1375,32 @@
                 <span>Mehr Energie, Struktur und Bewegung im eigenen Tempo.</span>
               </div>
               <div class="trust-pill">
-                <strong>Beratung</strong>
-                <span>Individuell, mobil und lösungsorientiert für deinen Alltag.</span>
+                <strong>Betreuung & Beratung</strong>
+                <span>Mehr Sicherheit, Klarheit und Unterstützung im Alltag.</span>
               </div>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="MoveMates Markenvorschau">
-            <div class="device-card">
+          <div class="hero-visual" aria-label="MoveMates Bilderkarussell">
+            <div class="hero-carousel-card">
               <div class="device-top">
                 <div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>
-                <span>MoveMates Coaching System</span>
+                <span>MoveMates Trainingseinblicke</span>
               </div>
-              <div class="brand-shot">
-                <img src="assets/logo-card.jpg" alt="MoveMates Logo mit Mensch und Hund">
-              </div>
-              <div class="insight-panel">
-                <div class="insight-title">
-                  <strong>Smart Coaching Matrix</strong>
-                  <span class="status-dot">bereit</span>
-                </div>
-                <div class="metric-grid">
-                  <div class="metric"><b>01</b><span>Verstehen, was wirklich los ist.</span></div>
-                  <div class="metric"><b>02</b><span>Plan, der zu Mensch und Hund passt.</span></div>
-                  <div class="metric"><b>03</b><span>Begleitung mit messbarem Fortschritt.</span></div>
-                </div>
-              </div>
-            </div>
 
-            <div class="floating-card">
-              <h3>Ganzheitlich statt 08/15.</h3>
-              <p>Training wird erst stark, wenn Körpersprache, Alltag, Motivation und Umsetzbarkeit zusammen gedacht werden.</p>
-              <div class="pulse-line" aria-hidden="true"></div>
-            </div>
+              <div class="hero-carousel">
+                <img class="carousel-slide" src="assets/Karussell1.jpeg" alt="MoveMates Trainingseinheit mit Hund">
+                <img class="carousel-slide" src="assets/Karussell2.jpeg" alt="MoveMates Hundetraining im Alltag">
+                <img class="carousel-slide" src="assets/Karussell3.jpeg" alt="MoveMates Training mit Mensch und Hund">
+              </div>
+
+              <div class="carousel-caption">
+                <span>ECHTE EINBLICKE</span>
+                <h3>Training, das draußen im Alltag stattfindet.</h3>
+                <p>Individuell, ruhig und nah an dem, was Mensch und Hund wirklich brauchen.</p>
+              </div>
+            </div>        
           </div>
-        </div>
-      </section>
-
-      <section class="section section-tight" aria-label="Kurzprofil">
-        <div class="container logos-strip">
-          <article class="strip-card">
-            <small>Ort</small>
-            <strong>Paderborn & Umgebung</strong>
-          </article>
-          <article class="strip-card">
-            <small>Format</small>
-            <strong>Einzeltraining, Beratung, Coaching</strong>
-          </article>
-          <article class="strip-card">
-            <small>Kontakt</small>
-            <strong>info@move-mates.de</strong>
-          </article>
         </div>
       </section>
 
@@ -1270,14 +1412,14 @@
               <h2>Drei Bereiche. Ein Ziel: mehr Klarheit im Alltag.</h2>
             </div>
             <p>
-              Die Website ist bewusst nicht als starre Preisliste gebaut, sondern als hochwertige Beratungsseite. So wirkt MoveMates persönlicher und du kannst später einzelne Pakete ergänzen.
+              Durch individuelles Hundetraining, Personal Coaching und Beratung werden nicht nur die Fähigkeiten des Hundes gefördert, sondern auch die Ressourcen des Menschen gestärkt. Denn echte Veränderung entsteht dort, wo beide Seiten wachsen dürfen.
             </p>
           </div>
 
           <div class="service-grid">
             <article class="service-card">
               <div class="icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M5.5 13.5c1.7-3.2 3.9-4.8 6.5-4.8s4.8 1.6 6.5 4.8"/><path d="M8 14.5c0 2.2 1.8 4 4 4s4-1.8 4-4"/><path d="M6.2 8.2c-.8-1.1-.9-2.5-.2-3.1.7-.6 1.9-.1 2.7 1 .8 1.1.9 2.5.2 3.1-.7.6-1.9.1-2.7-1Z"/><path d="M17.8 8.2c.8-1.1.9-2.5.2-3.1-.7-.6-1.9-.1-2.7 1-.8 1.1-.9 2.5-.2 3.1.7.6 1.9.1 2.7-1Z"/></svg>
+                <img src="assets/Pfote.png" alt="">
               </div>
               <h3>Hundetraining</h3>
               <p>Für Mensch-Hund-Teams, die mehr Ruhe, Orientierung und Sicherheit im Alltag möchten.</p>
@@ -1290,7 +1432,7 @@
 
             <article class="service-card featured">
               <div class="icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M7 20V9"/><path d="M17 20V9"/><path d="M5 9h14"/><path d="M8 4h8l3 5H5l3-5Z"/><path d="M10 13h4"/><path d="M10 16h4"/></svg>
+                <img src="assets/zwei-männchen.png" alt="">
               </div>
               <h3>Personal Coaching</h3>
               <p>Für Menschen, die Bewegung, Körpergefühl und mentale Stärke wieder alltagstauglich aufbauen möchten.</p>
@@ -1303,16 +1445,48 @@
 
             <article class="service-card">
               <div class="icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 12h9"/><path d="M13 7l5 5-5 5"/><path d="M4 6h11"/><path d="M4 18h11"/></svg>
+                <img src="assets/Gassi.png" alt="">
               </div>
-              <h3>Beratung</h3>
-              <p>Für alle, die eine ehrliche Einschätzung, einen nächsten Schritt oder eine Entscheidungshilfe brauchen.</p>
+              <h3>Betreuung & Beratung</h3>
+              <p>Für alle, die sich verlässliche Unterstützung, ehrliche Orientierung und alltagstaugliche Entscheidungen rund um Hund und Mensch wünschen.</p>
               <ul class="clean-list">
-                <li>Erstgespräch und Situationsanalyse</li>
-                <li>Alltagscheck für Mensch, Hund und Umfeld</li>
-                <li>Empfehlung für Training, Coaching oder nächste Schritte</li>
+                <li>Individuelle Betreuung nach Absprache</li>
+                <li>Beratung zu Hundehaltung, Alltag und Vorbereitung</li>
+                <li>Zuverlässig, persönlich und flexibel</li>
               </ul>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="philosophie">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Philosophie</span>
+              <h2>Echt. Alltagsnah. Für euch.</h2>
+            </div>
+            <p>
+              Es gibt diese Momente, in denen man merkt, dass der Alltag lauter geworden ist als man selbst.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <p class="lead-line">
+              Der Hund wartet an der Tür. Die Leine liegt bereit. Eigentlich ist der Spaziergang die Zeit, auf die man sich freuen sollte – ein gemeinsamer Moment, der entschleunigt, verbindet und den Kopf frei macht.
+            </p>
+            <p>
+              Stattdessen fühlt er sich manchmal wie ein weiterer Punkt auf einer ohnehin schon langen To-do-Liste an. Nicht, weil dir dein Hund nicht wichtig ist. Sondern weil das Leben manchmal einfach viel verlangt.
+            </p>
+            <p>
+              Genau dort beginnt mein Personal Coaching: nicht mit fertigen Lösungen, nicht mit starren Konzepten, sondern mit einem offenen Blick auf das, was euch als Mensch-Hund-Team wirklich bewegt.
+            </p>
+            <p>
+              Gemeinsam schaffen wir Strukturen, die entlasten, entwickeln Routinen, die sich gut anfühlen, und finden Lösungen, die langfristig Bestand haben dürfen. Denn ein entspannter Alltag entsteht selten durch einzelne Methoden. Er entsteht dann, wenn Mensch und Hund sich gegenseitig Sicherheit geben, wenn aus Unsicherheit Vertrauen wird und aus Anspannung wieder Leichtigkeit.
+            </p>
+            <p>
+              Ich glaube an kleine Schritte, die Großes bewegen können. An Verständnis statt Perfektion. An Lösungen, die zu dir passen. Und daran, dass ein erfülltes Zusammenleben mit deinem Hund dort beginnt, wo du dir selbst wieder mit mehr Ruhe, Klarheit und Vertrauen begegnest.
+            </p>
           </div>
         </div>
       </section>
@@ -1324,7 +1498,7 @@
               <span class="eyebrow">Methode</span>
               <h2>Analyse, Plan, Umsetzung, Feedback.</h2>
               <p>
-                Modern heißt hier nicht kühl oder kompliziert. Modern heißt: sauber beobachten, verständlich erklären und daraus einen Plan entwickeln, der im echten Leben funktioniert.
+                Modern heißt hier nicht kühl oder kompliziert. Modern heißt: ehrlich hinschauen, verständlich erklären und daraus einen Plan entwickeln, der im echten Leben funktioniert. Ohne Druck, ohne Fachchinesisch, dafür mit Praxisbezug.
               </p>
               <div class="actions">
                 <a class="btn gold" href="#termin">Kennenlernen starten</a>
@@ -1372,11 +1546,11 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <span class="eyebrow">Aufteilung</span>
-              <h2>So könnte die Angebotsseite später als Tabs funktionieren.</h2>
+              <span class="eyebrow">Angebote im Detail</span>
+              <h2>Wähle den Bereich, der gerade zu dir passt.</h2>
             </div>
             <p>
-              Die Tabs machen die Seite hochwertiger und verhindern, dass Besucher von zu vielen Informationen erschlagen werden. Gleichzeitig bleibt alles auf einer Seite und ist schnell erreichbar.
+              Ob Training, Coaching, Beratung oder Betreuung: Entscheidend ist nicht ein starres Konzept, sondern ein Angebot, das zu deinem Alltag passt.
             </p>
           </div>
 
@@ -1391,8 +1565,8 @@
                 <span>Für Bewegung, Körpergefühl und Struktur.</span>
               </button>
               <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-beratung" id="tab-beratung" data-tab="beratung">
-                <strong>Beratung</strong>
-                <span>Für Klarheit, Einschätzung und nächste Schritte.</span>
+                <strong>Betreuung & Beratung</strong>
+                <span>Für Klarheit, Einschätzung und Unterstützung.</span>
               </button>
             </div>
 
@@ -1402,10 +1576,13 @@
                 <p>
                   Nicht nur der Hund wird betrachtet, sondern auch Umfeld, Routinen, Körpersprache und die Frage, was im Alltag realistisch umsetzbar ist.
                 </p>
+                <p>
+                  Ziel ist ein verständnisvolles, sicheres und harmonisches Miteinander. Dabei geht es nicht um starre Vorgaben, sondern um klare Kommunikation, Vertrauen und alltagstaugliche Schritte.
+                </p>
                 <div class="offer-points">
                   <div class="offer-point">Einzeltraining vor Ort oder draußen</div>
-                  <div class="offer-point">Konkrete Hausaufgaben nach jedem Termin</div>
-                  <div class="offer-point">Fokus auf Bindung, Sicherheit und Alltag</div>
+                  <div class="offer-point">Konkrete Übungen für euren Alltag</div>
+                  <div class="offer-point">Fokus auf Bindung, Sicherheit und Orientierung</div>
                 </div>
               </div>
               <div class="tab-visual" aria-hidden="true">
@@ -1422,12 +1599,15 @@
               <div class="tab-content">
                 <h3>Personal Coaching, das nicht nach Fitnessstudio klingt.</h3>
                 <p>
-                  Ziel ist ein Körpergefühl, das im Alltag trägt. Bewegung, Routinen und Motivation werden so aufgebaut, dass sie langfristig funktionieren.
+                  Vielleicht wünschst du dir mehr Gelassenheit, mehr Klarheit und mehr Vertrauen in dich selbst und in euren gemeinsamen Weg. Genau dort setzt das Coaching an.
+                </p>
+                <p>
+                  Auf Wunsch ergänzen wir das Coaching durch alltagsnahe Bewegungskonzepte oder individuelle Beratungen. Nicht als Pflichtprogramm, sondern als sinnvolle Unterstützung für mehr Wohlbefinden, Balance und gemeinsame Zeit.
                 </p>
                 <div class="offer-points">
-                  <div class="offer-point">Körpergewicht, Outdoor oder Equipment möglich</div>
-                  <div class="offer-point">Routinen für Beruf, Alltag und Energielevel</div>
-                  <div class="offer-point">Optional kombinierbar mit Spaziergängen und Hund</div>
+                  <div class="offer-point">Bewegung passend zu deinem Alltag</div>
+                  <div class="offer-point">Routinen, die entlasten statt überfordern</div>
+                  <div class="offer-point">Optional kombinierbar mit Hund und Outdoor-Zeit</div>
                 </div>
               </div>
               <div class="tab-visual" aria-hidden="true">
@@ -1435,26 +1615,29 @@
                   <div><b>Move</b><span>Bewegung passend zum Alltag.</span></div>
                   <div><b>Mind</b><span>Motivation und Struktur.</span></div>
                   <div><b>Flow</b><span>Routinen statt Druck.</span></div>
-                  <div><b>Level</b><span>Steigerung im eigenen Tempo.</span></div>
+                  <div><b>Balance</b><span>Mehr Ruhe und Klarheit.</span></div>
                 </div>
               </div>
             </article>
 
             <article class="tab-panel" role="tabpanel" id="panel-beratung" aria-labelledby="tab-beratung" data-panel="beratung">
               <div class="tab-content">
-                <h3>Beratung für alle, die erst Orientierung brauchen.</h3>
+                <h3>Beratung – Klarheit, Wissen und sichere Entscheidungen.</h3>
                 <p>
-                  Manchmal braucht es nicht sofort ein großes Paket, sondern ein gutes Gespräch, eine klare Einschätzung und einen realistischen nächsten Schritt.
+                  Manchmal steht man noch ganz am Anfang. Oder mitten im Prozess und merkt, dass Unsicherheit entsteht: Welche Trainingsmethoden sind sinnvoll? Was brauche ich in meinem Alltag wirklich? Oder welcher Hund passt überhaupt in mein Leben?
+                </p>
+                <p>
+                  In einem persönlichen Gespräch nehmen wir uns Zeit für deine Fragen, deine Situation und deine Ziele. Dabei geht es nicht um schnelle Lösungen, sondern um verständliche, alltagstaugliche Orientierung.
                 </p>
                 <div class="offer-points">
-                  <div class="offer-point">Erstcheck für Situation, Ziel und Machbarkeit</div>
-                  <div class="offer-point">Empfehlung für Training oder Coaching</div>
-                  <div class="offer-point">Persönlich, ehrlich und ohne Verkaufsdruck</div>
+                  <div class="offer-point">Trainings- und Gesundheitsberatung</div>
+                  <div class="offer-point">Ernährung, Bewegung, Regeneration und Alltag</div>
+                  <div class="offer-point">Hundehaltung, Anschaffung und Vorbereitung</div>
                 </div>
               </div>
               <div class="tab-visual" aria-hidden="true">
                 <div class="visual-stat">
-                  <div><b>Check</b><span>Einordnung der Ausgangslage.</span></div>
+                  <div><b>Check</b><span>Einordnung deiner Ausgangslage.</span></div>
                   <div><b>Route</b><span>Nächster sinnvoller Schritt.</span></div>
                   <div><b>Fit</b><span>Passendes Format finden.</span></div>
                   <div><b>Clarity</b><span>Klarheit vor Entscheidung.</span></div>
@@ -1477,12 +1660,12 @@
           </div>
           <div class="about-card about-copy">
             <span class="eyebrow">Über Nelly</span>
-            <h2>Nelly Christine Philipp</h2>
+            <h2>Nelly Philipp</h2>
             <p>
               Ich begleite Menschen und Hunde dabei, sich gegenseitig besser zu verstehen, klarer zu kommunizieren und wieder mehr Sicherheit in ihren Alltag zu bringen. Mein Ansatz verbindet Empathie mit Struktur: ruhig, ehrlich, lösungsorientiert und immer mit Blick auf das, was im echten Leben machbar ist.
             </p>
             <p>
-              MoveMates steht für Bewegung, Verbindung und Entwicklung. Ob Hundetraining, Personal Coaching oder Beratung: Im Mittelpunkt steht nicht Perfektion, sondern ein Weg, der zu dir passt.
+              MoveMates steht für Bewegung, Verbindung und Entwicklung. Ob Hundetraining, Personal Coaching, Beratung oder Betreuung: Im Mittelpunkt steht nicht Perfektion, sondern ein Weg, der zu dir, deinem Hund und eurem Alltag passt.
             </p>
             <div class="facts-grid">
               <div class="fact">
@@ -1514,7 +1697,7 @@
               <h2>Erst anfragen, dann passend starten.</h2>
             </div>
             <p>
-              Für den Anfang reicht ein Anfrageformular per Mail. Später kannst du an dieser Stelle ein echtes Buchungssystem wie Calendly, Microsoft Bookings oder ein eigenes Formular einbauen.
+              Schreib kurz, worum es geht. Danach klären wir gemeinsam, welches Format zu deiner Situation passt und wie der nächste sinnvolle Schritt aussehen kann.
             </p>
           </div>
 
@@ -1548,7 +1731,7 @@
                     <option value="">Bitte auswählen</option>
                     <option>Hundetraining</option>
                     <option>Personal Coaching</option>
-                    <option>Beratung</option>
+                    <option>Betreuung & Beratung</option>
                     <option>Noch unsicher</option>
                   </select>
                 </div>
@@ -1566,36 +1749,36 @@
                 <a class="btn secondary" href="mailto:info@move-mates.de?subject=MoveMates%20Anfrage">Direkt mailen</a>
               </div>
               <p class="form-note">
-                Hinweis: Dieses Demo-Formular öffnet dein E-Mail-Programm und sendet noch keine Daten an einen Server. Für eine Live-Website bitte Datenschutz, Spam-Schutz und Formularversand sauber umsetzen.
+                Mit dem Absenden öffnet sich dein E-Mail-Programm mit einer vorbereiteten Nachricht an MoveMates. Du kannst die Nachricht vor dem Versand noch prüfen und ergänzen.
               </p>
             </form>
           </div>
         </div>
       </section>
 
-      <section class="section" aria-label="Stimmen">
+      <section class="section" aria-label="Grundsätze">
         <div class="container">
           <div class="section-head">
             <div>
-              <span class="eyebrow">Vertrauen</span>
-              <h2>Platz für echte Stimmen und Ergebnisse.</h2>
+              <span class="eyebrow">Grundsätze</span>
+              <h2>Woran sich die Arbeit von MoveMates orientiert.</h2>
             </div>
             <p>
-              Sobald erste Kundinnen und Kunden Feedback geben, sollten hier echte kurze Zitate stehen. Das ist deutlich stärker als generische Werbetexte.
+              Vertrauen entsteht nicht durch große Versprechen, sondern durch klare Haltung, ehrliche Einschätzung und Schritte, die wirklich in den Alltag passen.
             </p>
           </div>
           <div class="testimonials">
             <article class="quote-card">
-              <p>„Schon nach dem ersten Termin hatten wir einen klaren Plan und wussten, worauf wir im Alltag achten müssen.“</p>
-              <div class="quote-author"><strong>Beispielstimme</strong><span>Hundetraining</span></div>
+              <p>„Ohne Druck. Veränderung darf in deinem Tempo entstehen und muss nicht laut oder perfekt sein.“</p>
+              <div class="quote-author"><strong>Verständnis statt Perfektion</strong><span>echt und alltagsnah</span></div>
             </article>
             <article class="quote-card">
-              <p>„Die Kombination aus Bewegung, Struktur und persönlicher Begleitung hat mir geholfen, wieder dranzubleiben.“</p>
-              <div class="quote-author"><strong>Beispielstimme</strong><span>Personal Coaching</span></div>
+              <p>„Wissen soll Sicherheit geben. Deshalb wird verständlich erklärt, was sinnvoll ist und warum es zu deiner Situation passt.“</p>
+              <div class="quote-author"><strong>Klarheit statt Fachchinesisch</strong><span>praxisnah und ehrlich</span></div>
             </article>
             <article class="quote-card">
-              <p>„Es ging nicht um Druck, sondern um realistische Schritte. Genau das hat den Unterschied gemacht.“</p>
-              <div class="quote-author"><strong>Beispielstimme</strong><span>Beratung</span></div>
+              <p>„Mensch und Hund werden gemeinsam betrachtet. Denn nachhaltige Veränderung entsteht dort, wo beide Seiten wachsen dürfen.“</p>
+              <div class="quote-author"><strong>Gemeinsam wachsen</strong><span>für Mensch und Hund</span></div>
             </article>
           </div>
         </div>
@@ -1606,9 +1789,9 @@
           <div class="section-head">
             <div>
               <span class="eyebrow">FAQ</span>
-              <h2>Fragen, die Besucher wahrscheinlich haben.</h2>
+              <h2>Fragen, die vor dem ersten Termin oft entstehen.</h2>
             </div>
-            <p>Kurze Antworten nehmen Unsicherheit raus und erhöhen die Wahrscheinlichkeit, dass jemand Kontakt aufnimmt.</p>
+            <p>Kurze Antworten nehmen Unsicherheit raus und helfen dir einzuschätzen, ob MoveMates zu deiner Situation passt.</p>
           </div>
 
           <div class="faq-list">
@@ -1617,16 +1800,20 @@
               <div class="faq-answer">Je nach Thema draußen, bei dir im Alltag oder an einem passenden Treffpunkt. Der konkrete Ort wird nach der Anfrage abgestimmt.</div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">Kann ich erst einmal nur beraten werden?</button>
-              <div class="faq-answer">Ja. Gerade wenn du unsicher bist, welches Angebot passt, ist ein kurzes Kennenlernen oder eine Beratung sinnvoll.</div>
+              <button class="faq-question" type="button" aria-expanded="false">Kann ich mich beraten lassen, bevor ich einen Hund aufnehme?</button>
+              <div class="faq-answer">Ja. Gerade vor der Anschaffung ist eine ehrliche Einschätzung sinnvoll. Gemeinsam schauen wir, welcher Hund zu deinem Alltag, deiner Persönlichkeit und deinen Möglichkeiten passt.</div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">Geht es in der Beratung auch um Training, Ernährung und Gesundheit?</button>
+              <div class="faq-answer">Ja. Die Beratung kann auch Fragen zu Bewegung, Regeneration, Ernährung und realistischen Trainingsplänen umfassen. Ziel ist mehr Sicherheit für langfristige Entscheidungen.</div>
             </article>
             <article class="faq-item">
               <button class="faq-question" type="button" aria-expanded="false">Ist das Personal Coaching auch für Anfänger geeignet?</button>
-              <div class="faq-answer">Ja. Der Ansatz ist individuell und startet dort, wo du gerade stehst. Es geht nicht um Leistung um jeden Preis, sondern um nachhaltige Bewegung.</div>
+              <div class="faq-answer">Ja. Der Ansatz startet dort, wo du gerade stehst. Es geht nicht um Leistung um jeden Preis, sondern um nachhaltige Bewegung, Routinen und Wohlbefinden.</div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">Gibt es feste Pakete oder Einzeltermine?</button>
-              <div class="faq-answer">Für die erste Version der Website sind Einzeltermine und individuelle Absprachen sinnvoll. Später kannst du konkrete Pakete, Preise und Buchungsoptionen ergänzen.</div>
+              <button class="faq-question" type="button" aria-expanded="false">Muss ich direkt ein großes Paket buchen?</button>
+              <div class="faq-answer">Nein. Der erste Schritt ist eine unverbindliche Anfrage. Danach wird gemeinsam geklärt, welches Format sinnvoll ist und ob Einzeltermine, Betreuung oder eine längere Begleitung besser passen.</div>
             </article>
           </div>
         </div>
@@ -1638,7 +1825,7 @@
             <span class="eyebrow">Kontakt</span>
             <h2>Bereit für den nächsten Schritt?</h2>
             <p>
-              Melde dich kurz mit deinem Thema. MoveMates ist flexibel für dich unterwegs und findet gemeinsam mit dir den passenden Startpunkt.
+              Melde dich kurz mit deinem Thema. MoveMates ist flexibel für dich unterwegs und findet gemeinsam mit dir den Startpunkt, der zu deinem Alltag passt.
             </p>
             <div class="actions">
               <a class="btn" href="#termin">Anfrage senden</a>
