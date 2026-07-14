@@ -1016,6 +1016,91 @@
       font-weight: 780;
     }
 
+    .read-more {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .read-more summary {
+      order: 1;
+    }
+
+    .read-more-content {
+      order: 2;
+      margin-top: 1.1rem;
+      animation: fadeInText .25s ease;
+    }
+
+    .read-more[open] .read-more-content {
+      order: 1;
+    }
+
+    .read-more[open] summary {
+      order: 2;
+      margin-top: 1.2rem;
+    }
+
+    .read-more summary {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      min-height: 46px;
+      padding: .78rem 1rem;
+      border-radius: 999px;
+      background: var(--green-dark);
+      color: #fff;
+      font-weight: 850;
+      cursor: pointer;
+      list-style: none;
+      box-shadow: 0 14px 34px rgba(32,38,25,.16);
+      transition: .22s ease;
+    }
+
+    .read-more summary:hover {
+      transform: translateY(-1px);
+      background: #141910;
+    }
+
+    .read-more summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .read-more summary::after {
+      content: "↓";
+      font-size: .95rem;
+      transition: .22s ease;
+    }
+
+    .read-more[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .summary-less {
+      display: none;
+    }
+
+    .read-more[open] .summary-more {
+      display: none;
+    }
+
+    .read-more[open] .summary-less {
+      display: inline;
+    }
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
     .booking-grid {
       display: grid;
       grid-template-columns: .8fr 1.2fr;
@@ -1471,24 +1556,70 @@
             </p>
           </div>
 
-          <div class="philosophy-card">
+          <div class="philosophy-card philosophy-card-collapsible">
             <p class="lead-line">
-              Der Hund wartet an der Tür. Die Leine liegt bereit. Eigentlich ist der Spaziergang die Zeit, auf die man sich freuen sollte – ein gemeinsamer Moment, der entschleunigt, verbindet und den Kopf frei macht.
+              <strong>Meine Philosophie</strong><br>
+              Mit Herz. Mit Wissen. Mit Perspektive.
             </p>
+
             <p>
-              Stattdessen fühlt er sich manchmal wie ein weiterer Punkt auf einer ohnehin schon langen To-do-Liste an. Nicht, weil dir dein Hund nicht wichtig ist. Sondern weil das Leben manchmal einfach viel verlangt.
+              Manchmal beginnt eine Herausforderung ganz unscheinbar. Manchmal hat dein Hund für den gemeinsamen Alltag einfach seine ganz eigenen Vorstellungen.
             </p>
+
             <p>
-              Genau dort beginnt mein Personal Coaching: nicht mit fertigen Lösungen, nicht mit starren Konzepten, sondern mit einem offenen Blick auf das, was euch als Mensch-Hund-Team wirklich bewegt.
+              Der Spaziergang soll entspannt werden, dein Hund entscheidet sich aber spontan dafür, die Umgebung auf Herz und Nieren zu prüfen. Besuch kommt vorbei und dein Hund übernimmt voller Begeisterung die Begrüßung. Das Essen steht kurz unbeobachtet da und dein Hund nutzt die Gelegenheit für eine kleine Qualitätskontrolle.
             </p>
+
             <p>
-              Gemeinsam schaffen wir Strukturen, die entlasten, entwickeln Routinen, die sich gut anfühlen, und finden Lösungen, die langfristig Bestand haben dürfen. Denn ein entspannter Alltag entsteht selten durch einzelne Methoden. Er entsteht dann, wenn Mensch und Hund sich gegenseitig Sicherheit geben, wenn aus Unsicherheit Vertrauen wird und aus Anspannung wieder Leichtigkeit.
+              Diese Situationen gehören zum Leben mit Hund dazu. Sie können lustig sein, manchmal anstrengend und manchmal bringen sie dich vielleicht auch an deine Grenzen.
             </p>
+
             <p>
-              Ich glaube an kleine Schritte, die Großes bewegen können. An Verständnis statt Perfektion. An Lösungen, die zu dir passen. Und daran, dass ein erfülltes Zusammenleben mit deinem Hund dort beginnt, wo du dir selbst wieder mit mehr Ruhe, Klarheit und Vertrauen begegnest.
+              Denn zwischen „mein Hund ist einfach so“ und „wir finden gemeinsam einen besseren Weg“ liegt vor allem eines: Verständnis.
             </p>
+
+            <details class="read-more">
+              <summary>
+                <span class="summary-more">Mehr über meine Philosophie lesen</span>
+                <span class="summary-less">Weniger anzeigen</span>
+              </summary>
+
+              <div class="read-more-content">
+                <p>
+                  Für mich beginnt gutes Hundetraining nicht mit einer schnellen Lösung oder einer Bewertung dessen, was gerade schwierig ist. Es beginnt mit Verständnis.
+                </p>
+
+                <p>
+                  Ich möchte dich und deinen Hund kennenlernen, eure Geschichte verstehen und mir ein ganzheitliches Bild von eurem Alltag machen. Dabei geht es nicht darum, nach Fehlern zu suchen, sondern herauszufinden, was euch bereits verbindet, welche Herausforderungen euch begegnen und welche Veränderungen euch wirklich helfen können.
+                </p>
+
+                <p>
+                  Mit viel Empathie, Fachwissen und einem offenen Blick begegne ich jedem Mensch-Hund-Team individuell und vorurteilsfrei. Denn jeder Hund bringt seine eigene Persönlichkeit mit und jeder Mensch seine eigenen Erfahrungen, Möglichkeiten und Herausforderungen.
+                </p>
+
+                <p>
+                  Als mobile Hundetrainerin arbeite ich bewusst im Einzelsetting und dort, wo euer Alltag stattfindet. Dadurch kann ich nicht nur euren Hund kennenlernen, sondern auch die Situationen, die euch im täglichen Leben beschäftigen. Gemeinsam schauen wir darauf, was euch Sicherheit gibt, wo ihr Unterstützung benötigt und wie ihr Schritt für Schritt zu einem harmonischen Zusammenleben finden könnt.
+                </p>
+
+                <p>
+                  Denn Veränderung entsteht nicht durch ein festes Schema, sondern durch eine Verbindung aus Verständnis, Vertrauen und passenden Lösungen für euch.
+                </p>
+
+                <p>
+                  Mein Ziel ist es, dich dabei zu unterstützen, deinen Hund besser zu verstehen, sicherer im Umgang mit ihm zu werden und gemeinsam einen Alltag zu gestalten, in dem ihr euch beide wohlfühlt.
+                </p>
+
+                <p>
+                  Du sprichst lieber Englisch? Kein Problem. Auch, wenn Deutsch nicht deine Muttersprache ist, begleite ich dich und deinen Hund gerne auf Englisch und unterstütze dich auf eurem gemeinsamen Weg.
+                </p>
+
+                <p>
+                  <strong>You feel more comfortable speaking English? No worries.</strong><br>
+                  Even if German is not your first language, I am happy to support you and your dog in English and help you feel understood throughout our journey together.
+                </p>
+              </div>
+            </details>
           </div>
-        </div>
       </section>
 
       <section class="section" id="methode">
