@@ -3,26 +3,381 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Datenschutz | MoveMates</title>
+  <title>Datenschutzerklärung | MoveMates by Nelly</title>
+  <meta name="description" content="Datenschutzerklärung von MoveMates by Nelly. Informationen zur Verarbeitung personenbezogener Daten, Kontaktaufnahme, Anamnese, Hundetraining, Mantrailing, Betreuung und Personal Coaching.">
+  <meta name="theme-color" content="#343b2b">
   <style>
-    body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;margin:0;background:#fbf5ec;color:#191a16}main{max-width:850px;margin:0 auto;padding:48px 20px}.card{background:#fff;border:1px solid rgba(52,59,43,.14);border-radius:28px;padding:28px;box-shadow:0 18px 55px rgba(32,38,25,.10)}a{color:#343b2b;font-weight:800}h1{letter-spacing:-.05em;line-height:1}.note{background:#f3e7d8;border-radius:18px;padding:16px;color:#676b5f}
+    :root {
+      --green: #5f7c36;
+      --green-dark: #202619;
+      --beige-2: #fbf5ec;
+      --gold: #c8aa72;
+      --ink: #191a16;
+      --muted: #676b5f;
+      --line: rgba(52, 59, 43, .16);
+      --shadow: 0 24px 80px rgba(32, 38, 25, .13);
+      --shadow-soft: 0 18px 55px rgba(32, 38, 25, .09);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: light;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(200, 170, 114, .20), transparent 34rem),
+        radial-gradient(circle at top right, rgba(95, 124, 54, .16), transparent 32rem),
+        linear-gradient(180deg, var(--beige-2), #fffaf3 48%, #f5eadb 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(52, 59, 43, .055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(52, 59, 43, .055) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.65), transparent 70%);
+      z-index: -1;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 2.2rem 1.1rem 4rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      margin-bottom: .8rem;
+      color: var(--green-dark);
+      font-weight: 850;
+      text-underline-offset: .18em;
+    }
+
+    .legal-card {
+      padding: clamp(1.4rem, 4vw, 2.6rem);
+      border-radius: 34px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(52,59,43,.12);
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      margin: .4rem 0 1.4rem;
+      font-size: clamp(2.1rem, 5vw, 4.1rem);
+      line-height: .98;
+      letter-spacing: -.065em;
+    }
+
+    h2 {
+      margin: 2.2rem 0 .85rem;
+      font-size: clamp(1.45rem, 2.8vw, 2.1rem);
+      line-height: 1.15;
+      letter-spacing: -.045em;
+    }
+
+    h3 {
+      margin: 1.4rem 0 .55rem;
+      font-size: 1.08rem;
+      color: var(--green-dark);
+      letter-spacing: -.02em;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: clamp(1rem, 1.8vw, 1.08rem);
+      line-height: 1.75;
+    }
+
+    p { margin: 0 0 1rem; }
+
+    ul {
+      margin: .4rem 0 1.1rem;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: .45rem;
+    }
+
+    li {
+      display: flex;
+      gap: .65rem;
+    }
+
+    li::before {
+      content: "";
+      flex: 0 0 .48rem;
+      width: .48rem;
+      height: .48rem;
+      margin-top: .72rem;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .notice {
+      margin: 1.2rem 0 1.8rem;
+      padding: 1rem 1.1rem;
+      border-radius: 22px;
+      background: rgba(243,231,216,.78);
+      border: 1px solid rgba(52,59,43,.10);
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .meta-box {
+      display: grid;
+      gap: .5rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 22px;
+      background: rgba(95,124,54,.08);
+      border: 1px solid rgba(95,124,54,.12);
+    }
+
+    .meta-box strong {
+      color: var(--ink);
+    }
+
+    .subtle {
+      color: rgba(103,107,95,.88);
+      font-size: .96rem;
+    }
+
+    .footer-note {
+      margin-top: 2.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      color: rgba(25,26,22,.66);
+      font-size: .94rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 680px) {
+      .page { padding-top: 1.4rem; }
+      .legal-card { border-radius: 26px; }
+    }
   </style>
 </head>
+
 <body>
-  <main>
-    <a href="index.html">← Zurück zur Startseite</a>
-    <div class="card">
+  <main class="page">
+    <a class="back-link" href="index.html">← Zurück zur Startseite</a>
+
+    <article class="legal-card">
       <h1>Datenschutzerklärung</h1>
-      <p class="note">Platzhalter. Vor Veröffentlichung bitte eine vollständige Datenschutzerklärung erstellen, passend zu Hosting, Formularen, Karten, Fonts, Analytics, Buchungstools und Drittanbietern.</p>
-      <h2>1. Verantwortliche Stelle</h2>
-      <p>MoveMates by Nelly, Nelly Christine Philipp, Musterstraße 1, 33098 Paderborn, info@move-mates.de</p>
-      <h2>2. Kontaktaufnahme</h2>
-      <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage.</p>
-      <h2>3. Server-Logfiles</h2>
-      <p>Beim Aufruf dieser Website können technisch notwendige Zugriffsdaten verarbeitet werden. Details hängen vom Hosting-Anbieter ab.</p>
-      <h2>4. Ihre Rechte</h2>
-      <p>Sie haben unter den gesetzlichen Voraussetzungen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.</p>
-    </div>
+
+      <p class="notice">
+        Diese Datenschutzerklärung informiert darüber, welche personenbezogenen Daten im Rahmen der Nutzung dieser Website, bei der Kontaktaufnahme sowie im Zusammenhang mit Angeboten von MoveMates verarbeitet werden.
+      </p>
+
+      <section>
+        <h2>1. Allgemeine Informationen</h2>
+        <p>
+          Ich nehme den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber, welche Daten ich erhebe, wie ich sie verwende und welche Rechte Sie haben. Es gilt die Datenschutz-Grundverordnung, DSGVO, sowie das Bundesdatenschutzgesetz, BDSG.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Verantwortliche Person</h2>
+        <p>
+          Verantwortlich für die Datenverarbeitung auf dieser Website und im Rahmen der angebotenen Leistungen ist:
+        </p>
+
+        <div class="meta-box">
+          <strong>MoveMates by Nelly</strong>
+          <span>Nele Kristin Philipp</span>
+          <span>Brüderstraße 12</span>
+          <span>33098 Paderborn</span>
+          <span>E-Mail: <a href="mailto:info@move-mates.de">info@move-mates.de</a></span>
+          <span>Telefon: <a href="tel:+4915259702372">0152 59702372</a></span>
+        </div>
+
+        <p class="subtle">
+          Bitte Anschrift und Schreibweise des Namens vor Veröffentlichung final prüfen und ergänzen.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Erhebung und Verarbeitung personenbezogener Daten</h2>
+        <p>
+          Im Rahmen der Kontaktaufnahme, Vorbereitung und Durchführung von Angeboten wie Anamnese, Hundetraining, Mantrailing, Betreuung und Personal Coaching können personenbezogene Daten verarbeitet werden. Dazu gehören insbesondere:
+        </p>
+
+        <ul>
+          <li>Kontaktdaten, zum Beispiel Name, Adresse, E-Mail-Adresse und Telefonnummer</li>
+          <li>gesundheitsrelevante Angaben im Rahmen des Personal Coachings, zum Beispiel körperliche Einschränkungen, Ziele, Fitnesszustand oder Angaben zu Belastbarkeit und Bewegung</li>
+          <li>Angaben zum Hund und zur Betreuung, zum Beispiel Name, Rasse, Alter, Verhalten, Vorgeschichte, Gesundheitsinformationen, Besonderheiten sowie Informationen, die für die sichere Durchführung von Training, Spaziergängen oder Betreuung erforderlich sind</li>
+          <li>Zahlungs- und Abrechnungsdaten, zum Beispiel Bankverbindung, Rechnungsadresse, Zahlungsstatus und Leistungsangaben</li>
+          <li>Kommunikationsdaten, zum Beispiel Nachrichten, E-Mails, Gesprächsnotizen und freiwillig mitgeteilte Informationen</li>
+          <li>Foto- und Videoaufnahmen, soweit diese zur Durchführung der Leistung erforderlich sind oder eine gesonderte freiwillige Einwilligung vorliegt</li>
+        </ul>
+
+        <p>
+          Die Verarbeitung erfolgt, soweit sie für die Vorbereitung oder Durchführung der Zusammenarbeit erforderlich ist, auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Soweit gesetzliche Aufbewahrungspflichten bestehen, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Soweit eine Verarbeitung auf Ihrer Einwilligung beruht, erfolgt sie auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.
+        </p>
+
+        <p>
+          Soweit im Rahmen des Personal Coachings gesundheitsbezogene Angaben verarbeitet werden, erfolgt dies nur, soweit diese für die Einschätzung und Durchführung der Begleitung erforderlich sind oder von Ihnen freiwillig mitgeteilt werden. Soweit hierfür eine ausdrückliche Einwilligung erforderlich ist, erfolgt die Verarbeitung auf Grundlage von Art. 9 Abs. 2 lit. a DSGVO.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Kontaktaufnahme per E-Mail, Telefon oder Formular</h2>
+        <p>
+          Wenn Sie mich per E-Mail, Telefon oder über das Kontaktformular kontaktieren, werden die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage verarbeitet.
+        </p>
+
+        <p>
+          Das Formular auf dieser Website erstellt eine vorbereitete E-Mail in Ihrem E-Mail-Programm. Die Nachricht wird erst übertragen, wenn Sie diese E-Mail tatsächlich absenden. Eine darüber hinausgehende Speicherung durch ein Formular-Backend findet nur statt, wenn ein solches später ausdrücklich eingebunden wird.
+        </p>
+
+        <p>
+          Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Vorbereitung oder Durchführung einer Leistung zusammenhängt. In sonstigen Fällen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO, dem berechtigten Interesse an der Bearbeitung von Anfragen.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Anamnese, Training, Mantrailing, Coaching und Betreuung</h2>
+        <p>
+          Im Rahmen der Anamnese, des Hundetrainings, des Mantrailings, der Betreuung oder des Personal Coachings können weitere Angaben erforderlich sein, um die Zusammenarbeit individuell und verantwortungsvoll gestalten zu können.
+        </p>
+
+        <p>
+          Dazu können Informationen zu Ihrer Lebenssituation, Ihrem Alltag, Ihren Zielen, Ihrem Hund, dessen Verhalten, Vorgeschichte, Gesundheitszustand, Besonderheiten und Umfeld sowie im Personal Coaching gesundheits- oder bewegungsbezogene Angaben gehören.
+        </p>
+
+        <p>
+          Diese Daten werden ausschließlich zur Vorbereitung, Durchführung, Dokumentation und Nachbereitung der vereinbarten Leistungen verarbeitet.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Zahlungs- und Abrechnungsdaten</h2>
+        <p>
+          Wenn Leistungen abgerechnet werden, verarbeite ich die hierfür notwendigen Daten, zum Beispiel Name, Anschrift, Rechnungsdaten, Zahlungsinformationen und Leistungsangaben.
+        </p>
+
+        <p>
+          Die Verarbeitung erfolgt zur Vertragsdurchführung gemäß Art. 6 Abs. 1 lit. b DSGVO sowie zur Erfüllung gesetzlicher Aufbewahrungspflichten gemäß Art. 6 Abs. 1 lit. c DSGVO. Buchhaltungs- und steuerrechtlich relevante Unterlagen können aufgrund gesetzlicher Vorgaben bis zu zehn Jahre aufbewahrt werden.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Foto- und Videoaufnahmen</h2>
+        <p>
+          Im Rahmen der Leistungserbringung können Foto- und Videoaufnahmen zu Dokumentations- oder Trainingszwecken entstehen, soweit dies für die Durchführung oder Nachbereitung der Leistung erforderlich oder mit Ihnen abgestimmt ist.
+        </p>
+
+        <p>
+          Eine Veröffentlichung oder sonstige Nutzung von Foto- und Videoaufnahmen zu Werbezwecken, auf der Website oder in sozialen Medien erfolgt ausschließlich auf Grundlage einer gesonderten freiwilligen Einwilligung. Dies gilt insbesondere für Veröffentlichungen auf Plattformen wie Instagram, Facebook oder TikTok.
+        </p>
+
+        <p>
+          Die Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt hiervon unberührt.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Weitergabe von Daten an Dritte</h2>
+        <p>
+          Ihre Daten werden nicht verkauft. Eine Weitergabe personenbezogener Daten erfolgt nur, soweit dies zur Durchführung der Leistung erforderlich ist, eine gesetzliche Verpflichtung besteht, Sie eingewilligt haben oder ein berechtigtes Interesse vorliegt.
+        </p>
+
+        <p>
+          Mögliche Empfänger können insbesondere Zahlungsdienstleister, Banken, Steuerberatung, Hosting-Anbieter, E-Mail-Anbieter, Cloud- oder IT-Dienstleister sowie sonstige technische Dienstleister sein. Werden Dienstleister im Auftrag eingesetzt, erfolgt dies, soweit erforderlich, auf Grundlage eines Auftragsverarbeitungsvertrages nach Art. 28 DSGVO.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Server-Logfiles</h2>
+        <p>
+          Beim Aufruf dieser Website können durch den Hosting-Anbieter technisch notwendige Zugriffsdaten verarbeitet werden. Dazu können insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seiten, Browsertyp, Betriebssystem und Referrer-URL gehören.
+        </p>
+
+        <p>
+          Die Verarbeitung erfolgt zur technischen Bereitstellung, Stabilität und Sicherheit der Website auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Details können je nach Hosting-Anbieter variieren.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Cookies, Analyse-Tools und externe Dienste</h2>
+        <p>
+          Diese Website verwendet in der aktuellen Fassung keine Analyse-Tools wie Google Analytics und keine extern eingebundenen Schriftarten. Sollten später Dienste wie Karten, Buchungstools, Analyse-Tools, Social-Media-Plugins oder externe Medien eingebunden werden, wird diese Datenschutzerklärung entsprechend ergänzt.
+        </p>
+      </section>
+
+      <section>
+        <h2>11. Speicherdauer</h2>
+        <p>
+          Personenbezogene Daten werden nur so lange gespeichert, wie dies für die Bearbeitung Ihrer Anfrage, die Durchführung der Leistung, die Dokumentation der Zusammenarbeit oder die Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist.
+        </p>
+
+        <p>
+          Daten, die ausschließlich auf Grundlage einer Einwilligung verarbeitet werden, werden gelöscht, sobald die Einwilligung widerrufen wird und keine andere Rechtsgrundlage für eine weitere Verarbeitung besteht. Gesetzliche Aufbewahrungsfristen, zum Beispiel für Buchhaltungsunterlagen, bleiben unberührt.
+        </p>
+      </section>
+
+      <section>
+        <h2>12. Datensicherheit</h2>
+        <p>
+          Ich treffe angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Missbrauch, unbefugtem Zugriff oder unbefugter Offenlegung zu schützen. Dazu können verschlüsselte Kommunikation, sichere Dateiablage, Passwortschutz und eine sorgfältige Auswahl technischer Dienstleister gehören.
+        </p>
+      </section>
+
+      <section>
+        <h2>13. Ihre Rechte</h2>
+        <p>
+          Sie haben unter den gesetzlichen Voraussetzungen folgende Rechte:
+        </p>
+
+        <ul>
+          <li>Recht auf Auskunft über die verarbeiteten personenbezogenen Daten gemäß Art. 15 DSGVO</li>
+          <li>Recht auf Berichtigung unrichtiger Daten gemäß Art. 16 DSGVO</li>
+          <li>Recht auf Löschung personenbezogener Daten gemäß Art. 17 DSGVO</li>
+          <li>Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO</li>
+          <li>Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO</li>
+          <li>Recht auf Widerspruch gegen bestimmte Verarbeitungen gemäß Art. 21 DSGVO</li>
+          <li>Recht auf Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft</li>
+        </ul>
+
+        <p>
+          Zur Ausübung Ihrer Rechte können Sie sich jederzeit über die oben genannten Kontaktdaten an mich wenden.
+        </p>
+      </section>
+
+      <section>
+        <h2>14. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+        <p>
+          Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen Datenschutzrecht verstößt.
+        </p>
+      </section>
+
+      <section>
+        <h2>15. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+        <p>
+          Diese Datenschutzerklärung kann angepasst werden, wenn sich die Website, die angebotenen Leistungen oder rechtliche Anforderungen ändern. Die jeweils aktuelle Fassung ist maßgeblich.
+        </p>
+      </section>
+
+      <p class="footer-note">
+        Stand: Juli 2026. Diese Vorlage ersetzt keine individuelle rechtliche Prüfung. Vor Veröffentlichung sollten insbesondere Anschrift, eingesetzte Dienste, Hosting, Zahlungswege, Foto- und Videoeinsatz sowie mögliche Buchungs-, Formular- oder Cloudsysteme final geprüft und ergänzt werden.
+      </p>
+    </article>
   </main>
 </body>
 </html>

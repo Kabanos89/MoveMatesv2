@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MoveMates by Nelly | Hundetraining, Personal Coaching & Betreuung</title>
-  <meta name="description" content="MoveMates begleitet Menschen und ihre Hunde durch Hundetraining, Personal Coaching, Beratung und Betreuung. Mit Herz, Wissen und Perspektive in Paderborn und Umgebung.">
+  <title>MoveMates by Nelly | Hundetraining, Anamnese, Mantrailing, Coaching & Betreuung</title>
+  <meta name="description" content="MoveMates begleitet Menschen und ihre Hunde durch Anamnese, Hundetraining, Mantrailing, Personal Coaching und Betreuung. Mit Herz, Wissen und Perspektive in Paderborn und Umgebung.">
   <meta name="theme-color" content="#343b2b">
   <meta property="og:title" content="MoveMates by Nelly">
-  <meta property="og:description" content="Hundetraining, Personal Coaching, Beratung und Betreuung. Mit Herz. Mit Wissen. Mit Perspektive.">
+  <meta property="og:description" content="Anamnese, Hundetraining, Mantrailing, Personal Coaching und Betreuung. Mit Herz. Mit Wissen. Mit Perspektive.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/MoveMates_Logo-HP.png">
   <link rel="preload" as="image" href="assets/MoveMates_Logo-HP.png">
@@ -19,7 +19,7 @@
       1. Texte direkt im HTML ändern.
       2. Bilder im Ordner /assets austauschen.
       3. Telefonnummer und Mail im HTML suchen: 0152 / info@move-mates.de.
-      4. Für echte Terminbuchung später Calendly, Microsoft Bookings oder ein Formular-Backend einbauen.
+      4. Für echten Formularversand später ein Formular-Backend, Spam-Schutz und Datenschutz sauber einbauen.
     */
 
     :root {
@@ -361,37 +361,7 @@
     .btn.ghost { --btn-bg: transparent; --btn-fg: var(--green-dark); border-color: rgba(52,59,43,.18); box-shadow: none; }
     .btn.gold { --btn-bg: linear-gradient(135deg, #d2b77d, #a9853f); --btn-fg: #201a0d; }
 
-    .hero-trust {
-      margin-top: 1.6rem;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: .7rem;
-      max-width: 680px;
-    }
-
-    .trust-pill {
-      padding: .9rem;
-      border: 1px solid rgba(52,59,43,.12);
-      border-radius: 20px;
-      background: rgba(255,255,255,.55);
-      backdrop-filter: blur(10px);
-    }
-
-    .trust-pill strong {
-      display: block;
-      font-size: 1.05rem;
-      letter-spacing: -.02em;
-    }
-
-    .trust-pill span {
-      display: block;
-      margin-top: .2rem;
-      color: var(--muted);
-      font-size: .86rem;
-      line-height: 1.35;
-    }
-
-    .hero-visual {
+.hero-visual {
       position: relative;
       min-height: 610px;
     }
@@ -515,20 +485,7 @@
   line-height: 1.55;
 }
 
-    .device-card {
-      position: absolute;
-      inset: 3rem 0 auto auto;
-      width: min(100%, 470px);
-      border: 1px solid rgba(255,255,255,.56);
-      border-radius: 38px;
-      background: linear-gradient(180deg, rgba(255,255,255,.74), rgba(255,255,255,.38));
-      backdrop-filter: blur(20px);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transform: rotate(1.2deg);
-    }
-
-    .device-top {
+.device-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -541,95 +498,7 @@
     .traffic i { width: 10px; height: 10px; border-radius: 50%; background: rgba(52,59,43,.18); }
     .device-top span { color: var(--muted); font-size: .8rem; }
 
-    .brand-shot {
-      margin: 1rem;
-      border-radius: 26px;
-      overflow: hidden;
-      border: 1px solid rgba(52,59,43,.10);
-      box-shadow: 0 16px 40px rgba(32,38,25,.12);
-    }
-
-    .insight-panel {
-      margin: 1rem;
-      padding: 1rem;
-      border-radius: 26px;
-      background: var(--green-dark);
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .insight-panel::before {
-      content: "";
-      position: absolute;
-      inset: -60% -30% auto auto;
-      width: 230px;
-      height: 230px;
-      background: radial-gradient(circle, rgba(200,170,114,.42), transparent 65%);
-    }
-
-    .insight-title {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: .75rem;
-    }
-
-    .insight-title strong { letter-spacing: -.02em; }
-    .status-dot { display: inline-flex; align-items: center; gap: .35rem; font-size: .78rem; color: rgba(255,255,255,.76); }
-    .status-dot::before { content:""; width:.48rem; height:.48rem; border-radius:50%; background:#b7d98d; box-shadow: 0 0 0 7px rgba(183,217,141,.14); }
-
-    .metric-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: .6rem;
-    }
-
-    .metric {
-      min-height: 104px;
-      padding: .82rem;
-      border-radius: 20px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.12);
-    }
-
-    .metric b { display:block; font-size:1.42rem; letter-spacing:-.04em; }
-    .metric span { display:block; margin-top:.35rem; color:rgba(255,255,255,.68); font-size:.78rem; line-height:1.32; }
-
-    .floating-card {
-      position: absolute;
-      left: 0;
-      bottom: 3.5rem;
-      width: min(100%, 330px);
-      padding: 1rem;
-      border-radius: 28px;
-      border: 1px solid rgba(52,59,43,.12);
-      background: rgba(255,255,255,.76);
-      backdrop-filter: blur(18px);
-      box-shadow: var(--shadow-soft);
-      z-index: 2;
-    }
-
-    .floating-card h3 { margin: 0 0 .45rem; letter-spacing: -.04em; }
-    .floating-card p { margin: 0; color: var(--muted); line-height: 1.55; }
-
-    .pulse-line {
-      margin-top: .9rem;
-      height: 46px;
-      border-radius: 16px;
-      background:
-        linear-gradient(90deg, transparent 0 8%, rgba(95,124,54,.28) 8% 9%, transparent 9% 17%, rgba(95,124,54,.60) 17% 19%, transparent 19% 28%, rgba(200,170,114,.70) 28% 31%, transparent 31% 48%, rgba(95,124,54,.42) 48% 50%, transparent 50% 100%),
-        linear-gradient(180deg, rgba(95,124,54,.10), rgba(95,124,54,.04));
-      background-size: 220% 100%, 100% 100%;
-      animation: scan 5s linear infinite;
-    }
-
-    @keyframes scan { to { background-position: -220% 0, 0 0; } }
-
-    .section-head {
+.section-head {
       display: grid;
       grid-template-columns: minmax(0, .86fr) minmax(280px, .44fr);
       gap: 2rem;
@@ -651,41 +520,7 @@
       font-size: 1.05rem;
     }
 
-    .logos-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-
-    .strip-card {
-      padding: 1.1rem;
-      min-height: 132px;
-      border-radius: 26px;
-      background: rgba(255,255,255,.56);
-      border: 1px solid rgba(52,59,43,.10);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .strip-card::after {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      right: -54px;
-      top: -46px;
-      background: radial-gradient(circle, rgba(95,124,54,.18), transparent 70%);
-    }
-
-    .strip-card small { color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-weight: 800; }
-    .strip-card strong { font-size: 1.2rem; letter-spacing: -.03em; }
-
-    .service-grid {
+.service-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
@@ -704,6 +539,37 @@
     }
 
     .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+    .service-card-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .card-link-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      margin-top: 1rem;
+      color: var(--green-dark);
+      font-weight: 850;
+      font-size: .92rem;
+    }
+
+    .card-link-hint::after {
+      content: "→";
+      transition: .2s ease;
+    }
+
+    .service-card-link:hover .card-link-hint::after {
+      transform: translateX(3px);
+    }
+
+    .service-card.featured .card-link-hint {
+      color: #f4dfad;
+    }
+
 
     .service-card.featured {
       background: linear-gradient(160deg, rgba(32,38,25,.94), rgba(52,59,43,.88));
@@ -740,84 +606,7 @@
     .clean-list li { color: var(--muted); line-height: 1.45; display: flex; gap: .55rem; }
     .clean-list li::before { content: ""; flex: 0 0 .48rem; width:.48rem; height:.48rem; margin-top:.48rem; border-radius:50%; background: var(--gold); }
 
-    .method {
-      border-radius: 42px;
-      background:
-        linear-gradient(135deg, rgba(32,38,25,.95), rgba(52,59,43,.90)),
-        radial-gradient(circle at top right, rgba(200,170,114,.22), transparent 36rem);
-      color: #fff;
-      padding: clamp(1.4rem, 4vw, 2.2rem);
-      overflow: hidden;
-      position: relative;
-      box-shadow: var(--shadow);
-    }
-
-    .method::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: radial-gradient(circle at top right, #000, transparent 70%);
-      pointer-events: none;
-    }
-
-    .method-inner {
-      position: relative;
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 1.2rem;
-      align-items: stretch;
-    }
-
-    .method-copy {
-      padding: 1.2rem;
-    }
-
-    .method-copy h2 {
-      margin: 1rem 0;
-      font-size: clamp(2rem, 4.4vw, 4.2rem);
-      line-height: 1;
-      letter-spacing: -.06em;
-    }
-
-    .method-copy p { color: rgba(255,255,255,.72); line-height: 1.7; margin-bottom: 1.4rem; }
-
-    .method-board {
-      display: grid;
-      gap: .8rem;
-    }
-
-    .step-card {
-      display: grid;
-      grid-template-columns: 68px 1fr auto;
-      gap: 1rem;
-      align-items: center;
-      padding: 1rem;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.075);
-      backdrop-filter: blur(12px);
-    }
-
-    .step-no {
-      width: 54px;
-      height: 54px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      color: var(--green-dark);
-      background: linear-gradient(135deg, #f4dfad, #c8aa72);
-    }
-
-    .step-card h3 { margin: 0 0 .25rem; letter-spacing: -.03em; }
-    .step-card p { margin: 0; color: rgba(255,255,255,.66); line-height: 1.45; }
-    .step-tag { color: rgba(255,255,255,.62); font-size: .82rem; border:1px solid rgba(255,255,255,.14); padding:.38rem .62rem; border-radius:999px; }
-
-    .tabs-wrap {
+.tabs-wrap {
       display: grid;
       grid-template-columns: 330px minmax(0, 1fr);
       gap: 1rem;
@@ -854,8 +643,8 @@
 
     .tab-panel {
       display: none;
-      min-height: 478px;
-      padding: clamp(1.2rem, 3vw, 2rem);
+      min-height: auto;
+      padding: clamp(1.35rem, 3vw, 2.4rem);
       border: 1px solid rgba(52,59,43,.12);
       border-radius: 34px;
       background: rgba(255,255,255,.70);
@@ -864,7 +653,7 @@
       position: relative;
     }
 
-    .tab-panel.is-visible { display: grid; grid-template-columns: 1fr .78fr; gap: 1.4rem; align-items: center; }
+    .tab-panel.is-visible { display: block; }
     .tab-panel::after {
       content:"";
       position:absolute;
@@ -876,9 +665,16 @@
       background: radial-gradient(circle, rgba(95,124,54,.15), transparent 68%);
     }
 
-    .tab-content { position: relative; z-index: 1; }
-    .tab-content h3 { margin: 0 0 .7rem; font-size: clamp(1.8rem, 3vw, 3rem); line-height: 1; letter-spacing: -.055em; }
-    .tab-content p { color: var(--muted); line-height: 1.7; margin: 0 0 1rem; }
+    .tab-content { position: relative; z-index: 1; max-width: 840px; }
+    .tab-content-wide { max-width: 860px; }
+    .tab-content h3 { margin: 0 0 .9rem; font-size: clamp(1.8rem, 3vw, 3rem); line-height: 1; letter-spacing: -.055em; }
+    .tab-content h4 { margin: 1.25rem 0 .65rem; color: var(--green-dark); font-size: 1.02rem; letter-spacing: -.025em; }
+    .tab-content p { color: var(--muted); line-height: 1.75; margin: 0 0 1rem; }
+    .tab-content .lead-line { color: var(--ink); font-weight: 780; font-size: 1.08rem; line-height: 1.65; }
+    .detail-list { padding: 0; margin: .8rem 0 1.05rem; list-style: none; display: grid; gap: .5rem; }
+    .detail-list li { color: var(--muted); line-height: 1.55; display: flex; gap: .6rem; }
+    .detail-list li::before { content: ""; flex: 0 0 .48rem; width: .48rem; height: .48rem; margin-top: .55rem; border-radius: 50%; background: var(--gold); }
+    .tab-actions { margin-top: 1.25rem; }
     .offer-points { display: grid; gap: .7rem; margin-top: 1.2rem; }
     .offer-point { padding: .8rem .9rem; border-radius: 18px; background: rgba(95,124,54,.08); color: var(--green-dark); font-weight: 750; }
 
@@ -988,6 +784,185 @@
 
     .fact strong { display:block; letter-spacing:-.03em; margin-bottom:.25rem; }
     .fact span { color: var(--muted); line-height: 1.45; font-size:.92rem; }
+
+
+    .about-showcase {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .about-photo-card {
+      position: relative;
+      min-height: 620px;
+      border-radius: 34px;
+      border: 1px solid rgba(52,59,43,.12);
+      background: rgba(255,255,255,.68);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .about-photo-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 44%;
+      background: linear-gradient(180deg, transparent, rgba(32,38,25,.72));
+      pointer-events: none;
+    }
+
+    .about-photo {
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(.96) contrast(1.02);
+    }
+
+    .about-photo-badge {
+      position: absolute;
+      left: 1.1rem;
+      right: 1.1rem;
+      bottom: 1.1rem;
+      z-index: 1;
+      padding: 1.05rem;
+      border-radius: 24px;
+      color: #fff;
+      background: rgba(32,38,25,.76);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 42px rgba(32,38,25,.22);
+    }
+
+    .about-photo-badge strong {
+      display: block;
+      margin-bottom: .35rem;
+      letter-spacing: -.025em;
+    }
+
+    .about-photo-badge span {
+      display: block;
+      color: rgba(255,255,255,.76);
+      line-height: 1.5;
+    }
+
+    .about-copy-elevated {
+      display: grid;
+      align-content: center;
+      padding: clamp(1.4rem, 3vw, 2rem);
+    }
+
+    .facts-grid-about .fact {
+      background: rgba(95,124,54,.075);
+    }
+
+    .credentials-block {
+      margin-top: 1rem;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border-radius: 34px;
+      border: 1px solid rgba(52,59,43,.12);
+      background:
+        radial-gradient(circle at top right, rgba(95,124,54,.13), transparent 22rem),
+        rgba(255,255,255,.66);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .credentials-intro {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(280px, .58fr);
+      gap: 1.5rem;
+      align-items: end;
+      margin-bottom: 1rem;
+    }
+
+    .credentials-intro h3 {
+      margin: .9rem 0 0;
+      font-size: clamp(1.9rem, 3.5vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    .credentials-intro p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.68;
+    }
+
+    .credential-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .85rem;
+    }
+
+    .credential-card {
+      min-height: 220px;
+      padding: 1.05rem;
+      border-radius: 24px;
+      border: 1px solid rgba(52,59,43,.12);
+      background: rgba(255,255,255,.64);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: .8rem;
+      transition: .22s ease;
+    }
+
+    .credential-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 45px rgba(32,38,25,.12);
+    }
+
+    .credential-card span {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      padding: .34rem .62rem;
+      border-radius: 999px;
+      background: rgba(95,124,54,.10);
+      color: var(--green-dark);
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .credential-card h4 {
+      margin: 0;
+      font-size: 1.28rem;
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .credential-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: .96rem;
+    }
+
+    .credential-card small {
+      color: rgba(103,107,95,.82);
+      font-weight: 780;
+    }
+
+    .credential-card-featured {
+      background: linear-gradient(160deg, rgba(32,38,25,.96), rgba(52,59,43,.88));
+      color: #fff;
+      border-color: rgba(255,255,255,.14);
+      box-shadow: 0 18px 50px rgba(32,38,25,.18);
+    }
+
+    .credential-card-featured span {
+      background: rgba(255,255,255,.12);
+      color: #f4dfad;
+    }
+
+    .credential-card-featured p,
+    .credential-card-featured small {
+      color: rgba(255,255,255,.72);
+    }
 
     .philosophy-card {
       max-width: 980px;
@@ -1210,30 +1185,7 @@
       line-height: 1.5;
     }
 
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .quote-card {
-      padding: 1.2rem;
-      min-height: 260px;
-      border-radius: 30px;
-      border: 1px solid rgba(52,59,43,.12);
-      background: rgba(255,255,255,.64);
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .quote-card p { margin: 0; color: var(--muted); line-height: 1.7; font-size: 1.02rem; }
-    .quote-author { margin-top: 1rem; display: grid; gap:.2rem; }
-    .quote-author strong { letter-spacing:-.03em; }
-    .quote-author span { color: var(--muted); font-size:.88rem; }
-
-    .faq-list {
+.faq-list {
       display: grid;
       gap: .75rem;
       max-width: 920px;
@@ -1279,36 +1231,7 @@
     .faq-answer { display: none; padding: 0 1.25rem 1.25rem; color: var(--muted); line-height: 1.7; }
     .faq-answer.is-open { display: block; }
 
-    .contact-section {
-      padding-bottom: 2.2rem;
-    }
-
-    .contact-panel {
-      display: grid;
-      grid-template-columns: .92fr 1.08fr;
-      gap: 1rem;
-      align-items: center;
-      padding: clamp(1.2rem, 3vw, 2rem);
-      border-radius: 42px;
-      background:
-        radial-gradient(circle at 10% 10%, rgba(200,170,114,.22), transparent 28rem),
-        linear-gradient(135deg, rgba(255,255,255,.74), rgba(255,255,255,.46));
-      border: 1px solid rgba(52,59,43,.12);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-panel h2 { margin: .9rem 0 1rem; font-size: clamp(2rem, 4vw, 4rem); line-height: 1; letter-spacing:-.06em; }
-    .contact-panel p { margin: 0 0 1.25rem; color: var(--muted); line-height: 1.7; }
-
-    .contact-image {
-      border-radius: 32px;
-      overflow: hidden;
-      border: 1px solid rgba(52,59,43,.10);
-      box-shadow: var(--shadow-soft);
-      transform: rotate(.7deg);
-    }
-
-    .footer {
+.footer {
       padding: 2rem 1.1rem 2.4rem;
       color: rgba(25,26,22,.68);
     }
@@ -1355,42 +1278,43 @@
       .hero { min-height: auto; padding-top: 3.5rem; }
       .hero-grid,
       .section-head,
-      .method-inner,
       .tabs-wrap,
       .about-grid,
-      .booking-grid,
-      .contact-panel { grid-template-columns: 1fr; }
+      .booking-grid { grid-template-columns: 1fr; }
       .hero-visual { min-height: 560px; }
-      .device-card { inset: 1rem 0 auto auto; }
-      .floating-card { bottom: 1.5rem; }
-      .tab-panel.is-visible { grid-template-columns: 1fr; }
-      .service-grid,
-      .testimonials,
-      .logos-strip { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 680px) {
       .section { padding: 4.4rem 1rem; }
       .hero-copy h1 { font-size: clamp(3.2rem, 17vw, 5rem); }
-      .hero-trust { grid-template-columns: 1fr; }
       .hero-visual { min-height: auto; display: grid; gap: 1rem; margin-top: 1.2rem; }
-      .device-card,
-      .hero-carousel-card,
-      .floating-card {
+      .hero-carousel-card {
         position: relative;
         inset: auto;
         width: 100%;
         transform: none;
       }
-      .metric-grid { grid-template-columns: 1fr; }
-      .step-card { grid-template-columns: 52px 1fr; }
-      .step-tag { grid-column: 1 / -1; width: fit-content; }
       .facts-grid,
       .form-grid { grid-template-columns: 1fr; }
       .portrait-placeholder { min-height: 430px; }
       .tab-visual { min-height: 260px; }
       .visual-stat { grid-template-columns: 1fr; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+
+    @media (max-width: 1020px) {
+      .about-showcase,
+      .credentials-intro { grid-template-columns: 1fr; }
+      .credential-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 680px) {
+      .about-photo-card { min-height: 520px; }
+      .about-photo { min-height: 520px; }
+      .credential-grid { grid-template-columns: 1fr; }
+      .credential-card { min-height: auto; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1425,14 +1349,13 @@
         <nav aria-label="Hauptnavigation">
           <ul class="nav-links" id="navLinks">
             <li><a href="#angebote">Angebote</a></li>
-            <li><a href="#methode">Methode</a></li>
-            <li><a href="#ueber-mich">Über Nelly</a></li>
-            <li><a href="#termin">Termin buchen</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#philosophie">Philosophie</a></li>
+            <li><a href="#ueber-mich">Über mich</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
           </ul>
         </nav>
 
-        <a class="nav-cta" href="#termin">Erstgespräch buchen</a>
+        <a class="nav-cta" href="#kontakt">Kontakt aufnehmen</a>
         <button class="mobile-toggle" type="button" aria-label="Menü öffnen" aria-controls="navLinks" aria-expanded="false" id="mobileToggle"><span></span></button>
       </div>
     </header>
@@ -1447,23 +1370,10 @@
               Veränderung beginnt dort, wo Verständnis, Bewegung und Vertrauen zusammenkommen. MoveMates begleitet Menschen und ihre Hunde auf dem Weg zu einem gesunden, verständnisvollen und harmonischen Miteinander.
             </p>
             <div class="hero-actions">
-              <a class="btn" href="#termin">Termin anfragen</a>
+              <a class="btn" href="#kontakt">Kontakt aufnehmen</a>
               <a class="btn secondary" href="#angebote">Angebote ansehen</a>
             </div>
-            <div class="hero-trust" aria-label="Schwerpunkte">
-              <div class="trust-pill">
-                <strong>Hundetraining</strong>
-                <span>Alltag, Bindung, Orientierung und klare Kommunikation.</span>
-              </div>
-              <div class="trust-pill">
-                <strong>Personal Coaching</strong>
-                <span>Mehr Energie, Struktur und Bewegung im eigenen Tempo.</span>
-              </div>
-              <div class="trust-pill">
-                <strong>Betreuung & Beratung</strong>
-                <span>Mehr Sicherheit, Klarheit und Unterstützung im Alltag.</span>
-              </div>
-            </div>
+            
           </div>
 
           <div class="hero-visual" aria-label="MoveMates Bilderkarussell">
@@ -1494,52 +1404,55 @@
           <div class="section-head">
             <div>
               <span class="eyebrow">Angebote</span>
-              <h2>Drei Bereiche. Ein Ziel: mehr Klarheit im Alltag.</h2>
+              <h2>Drei Schwerpunkte. Ein Ziel: mehr Klarheit im Alltag.</h2>
             </div>
             <p>
-              Durch individuelles Hundetraining, Personal Coaching und Beratung werden nicht nur die Fähigkeiten des Hundes gefördert, sondern auch die Ressourcen des Menschen gestärkt. Denn echte Veränderung entsteht dort, wo beide Seiten wachsen dürfen.
+              Hier bekommst du einen schnellen Überblick über die drei Hauptbereiche von MoveMates. Wenn du mehr wissen möchtest, führt dich jede Kachel direkt zum passenden Detailbereich weiter unten.
             </p>
           </div>
 
           <div class="service-grid">
-            <article class="service-card">
+            <a class="service-card service-card-link" href="#details" data-jump-tab="hund" aria-label="Mehr zum Hundetraining lesen">
               <div class="icon-box" aria-hidden="true">
                 <img src="assets/Pfote.png" alt="">
               </div>
               <h3>Hundetraining</h3>
-              <p>Für Mensch-Hund-Teams, die mehr Ruhe, Orientierung und Sicherheit im Alltag möchten.</p>
+              <p>Für Mensch-Hund-Teams, die Verhalten verstehen, Orientierung aufbauen und im Alltag sicherer miteinander werden möchten.</p>
               <ul class="clean-list">
-                <li>Leinenführung, Rückruf und Alltagssituationen</li>
-                <li>Kommunikation, Körpersprache und Timing</li>
-                <li>Individuelle Trainingspläne statt Standardlösung</li>
+                <li>Leinenführigkeit, Rückruf und Begegnungssituationen</li>
+                <li>Körpersprache, Bedürfnisse und klare Kommunikation</li>
+                <li>Individueller Trainingsweg statt Standardschema</li>
               </ul>
-            </article>
+              <span class="card-link-hint">Mehr zum Hundetraining</span>
+            </a>
 
-            <article class="service-card featured">
+            <a class="service-card service-card-link featured" href="#details" data-jump-tab="coaching" aria-label="Mehr zum Personal Coaching lesen">
               <div class="icon-box" aria-hidden="true">
                 <img src="assets/zwei-männchen.png" alt="">
               </div>
               <h3>Personal Coaching</h3>
-              <p>Für Menschen, die Bewegung, Körpergefühl und mentale Stärke wieder alltagstauglich aufbauen möchten.</p>
+              <p>Für Hundehalterinnen und Hundehalter, die zwischen Alltag, Verantwortung und Hund wieder mehr Ruhe, Struktur und Leichtigkeit finden möchten.</p>
               <ul class="clean-list">
-                <li>Training mit realistischem Plan und klarer Struktur</li>
-                <li>Motivation, Routinen und Fortschritt im Blick</li>
-                <li>Optional kombinierbar mit Hund und Outdoor-Bewegung</li>
+                <li>Gesunde Routinen und Bewegung im Alltag</li>
+                <li>Mehr Sicherheit und Klarheit im Umgang mit deinem Hund</li>
+                <li>Strukturen, die zu deinem Leben passen</li>
               </ul>
-            </article>
+              <span class="card-link-hint">Mehr zum Personal Coaching</span>
+            </a>
 
-            <article class="service-card">
+            <a class="service-card service-card-link" href="#details" data-jump-tab="betreuung" aria-label="Mehr zur Betreuung lesen">
               <div class="icon-box" aria-hidden="true">
                 <img src="assets/Gassi.png" alt="">
               </div>
-              <h3>Betreuung & Beratung</h3>
-              <p>Für alle, die sich verlässliche Unterstützung, ehrliche Orientierung und alltagstaugliche Entscheidungen rund um Hund und Mensch wünschen.</p>
+              <h3>Betreuung</h3>
+              <p>Für Tage, an denen dein Hund zuverlässige Unterstützung, Bewegung und Aufmerksamkeit im vertrauten Umfeld braucht.</p>
               <ul class="clean-list">
-                <li>Individuelle Betreuung nach Absprache</li>
-                <li>Beratung zu Hundehaltung, Alltag und Vorbereitung</li>
-                <li>Zuverlässig, persönlich und flexibel</li>
+                <li>Individuelle Gassigänge und Betreuung zuhause</li>
+                <li>Versorgung, Beschäftigung und Alltagshilfe</li>
+                <li>Rückmeldung und Blick für die Bedürfnisse deines Hundes</li>
               </ul>
-            </article>
+              <span class="card-link-hint">Mehr zur Betreuung</span>
+            </a>
           </div>
         </div>
       </section>
@@ -1620,56 +1533,6 @@
               </div>
             </details>
           </div>
-      </section>
-
-      <section class="section" id="methode">
-        <div class="container method">
-          <div class="method-inner">
-            <div class="method-copy">
-              <span class="eyebrow">Methode</span>
-              <h2>Analyse, Plan, Umsetzung, Feedback.</h2>
-              <p>
-                Modern heißt hier nicht kühl oder kompliziert. Modern heißt: ehrlich hinschauen, verständlich erklären und daraus einen Plan entwickeln, der im echten Leben funktioniert. Ohne Druck, ohne Fachchinesisch, dafür mit Praxisbezug.
-              </p>
-              <div class="actions">
-                <a class="btn gold" href="#termin">Kennenlernen starten</a>
-              </div>
-            </div>
-            <div class="method-board">
-              <article class="step-card">
-                <div class="step-no">01</div>
-                <div>
-                  <h3>Verstehen</h3>
-                  <p>Was passiert im Alltag wirklich? Welche Auslöser, Muster und Ziele gibt es?</p>
-                </div>
-                <span class="step-tag">Analyse</span>
-              </article>
-              <article class="step-card">
-                <div class="step-no">02</div>
-                <div>
-                  <h3>Planen</h3>
-                  <p>Aus der Analyse entsteht ein klarer Fahrplan, der zu dir, deinem Hund und deinem Zeitfenster passt.</p>
-                </div>
-                <span class="step-tag">Strategie</span>
-              </article>
-              <article class="step-card">
-                <div class="step-no">03</div>
-                <div>
-                  <h3>Trainieren</h3>
-                  <p>Du bekommst konkrete Übungen, Feedback und eine verständliche Priorisierung.</p>
-                </div>
-                <span class="step-tag">Praxis</span>
-              </article>
-              <article class="step-card">
-                <div class="step-no">04</div>
-                <div>
-                  <h3>Festigen</h3>
-                  <p>Fortschritt wird überprüft, angepasst und langfristig in den Alltag übertragen.</p>
-                </div>
-                <span class="step-tag">Routine</span>
-              </article>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -1681,164 +1544,330 @@
               <h2>Wähle den Bereich, der gerade zu dir passt.</h2>
             </div>
             <p>
-              Ob Training, Coaching, Beratung oder Betreuung: Entscheidend ist nicht ein starres Konzept, sondern ein Angebot, das zu deinem Alltag passt.
+              Jede Zusammenarbeit beginnt mit Verständnis. Hier findest du die Angebote von MoveMates ausführlicher erklärt: vom ersten Kennenlernen über individuelles Hundetraining bis hin zu Mantrailing, Betreuung und Personal Coaching.
             </p>
           </div>
 
           <div class="tabs-wrap">
             <div class="tab-list" role="tablist" aria-label="Angebotsdetails">
-              <button class="tab-button" role="tab" aria-selected="true" aria-controls="panel-hund" id="tab-hund" data-tab="hund">
+              <button class="tab-button" role="tab" aria-selected="true" aria-controls="panel-anamnese" id="tab-anamnese" data-tab="anamnese">
+                <strong>Anamnese</strong>
+                <span>90 Minuten für ein echtes Verständnis eurer Situation.</span>
+              </button>
+              <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-hund" id="tab-hund" data-tab="hund">
                 <strong>Hundetraining</strong>
                 <span>Für Alltag, Orientierung und Teamgefühl.</span>
               </button>
+              <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-mantrailing" id="tab-mantrailing" data-tab="mantrailing">
+                <strong>Mantrailing</strong>
+                <span>Nasenarbeit mit Köpfchen, Freude und Vertrauen.</span>
+              </button>
+              <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-betreuung" id="tab-betreuung" data-tab="betreuung">
+                <strong>Betreuung</strong>
+                <span>Gassiservice und Hundesitting im vertrauten Umfeld.</span>
+              </button>
               <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-coaching" id="tab-coaching" data-tab="coaching">
                 <strong>Personal Coaching</strong>
-                <span>Für Bewegung, Körpergefühl und Struktur.</span>
-              </button>
-              <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-beratung" id="tab-beratung" data-tab="beratung">
-                <strong>Betreuung & Beratung</strong>
-                <span>Für Klarheit, Einschätzung und Unterstützung.</span>
+                <span>Für Bewegung, Struktur und mehr Leichtigkeit.</span>
               </button>
             </div>
 
-            <article class="tab-panel is-visible" role="tabpanel" id="panel-hund" aria-labelledby="tab-hund" data-panel="hund">
-              <div class="tab-content">
-                <h3>Hundetraining mit Blick auf das ganze Team.</h3>
-                <p>
-                  Nicht nur der Hund wird betrachtet, sondern auch Umfeld, Routinen, Körpersprache und die Frage, was im Alltag realistisch umsetzbar ist.
+            <article class="tab-panel is-visible" role="tabpanel" id="panel-anamnese" aria-labelledby="tab-anamnese" data-panel="anamnese">
+              <div class="tab-content tab-content-wide">
+                <h3>Anamnese Mensch-Hund-Team.</h3>
+                <p class="lead-line">
+                  Jede erfolgreiche Zusammenarbeit beginnt mit einem guten Verständnis, nicht mit schnellen Lösungen.
                 </p>
                 <p>
-                  Ziel ist ein verständnisvolles, sicheres und harmonisches Miteinander. Dabei geht es nicht um starre Vorgaben, sondern um klare Kommunikation, Vertrauen und alltagstaugliche Schritte.
+                  Deshalb nehmen wir uns in der Anamnese und Team-Analyse bewusst Zeit, deinen Alltag in Ruhe kennenzulernen. Ohne Übungen, ohne Trainingsdruck und ohne den Anspruch, bereits alles verändern zu müssen. Im Mittelpunkt stehen deine Geschichte, deine Erfahrungen, eure aktuelle Lebenssituation und die Hintergründe, die dein Zusammenleben mit deinem Hund prägen.
                 </p>
-                <div class="offer-points">
-                  <div class="offer-point">Einzeltraining vor Ort oder draußen</div>
-                  <div class="offer-point">Konkrete Übungen für euren Alltag</div>
-                  <div class="offer-point">Fokus auf Bindung, Sicherheit und Orientierung</div>
+                <p>
+                  Vor Ort verschaffe ich mir einen Eindruck von deinem gewohnten Umfeld und den Situationen, die dich im Alltag beschäftigen. So entsteht ein umfassendes Bild eures Mensch-Hund-Teams. Diese Analyse bildet die Grundlage für die weitere Zusammenarbeit, damit ein Konzept entstehen kann, das zu euren Bedürfnissen passt und realistisch in euren Alltag integrierbar ist.
+                </p>
+                <h4>Die Team-Analyse umfasst unter anderem:</h4>
+                <ul class="detail-list">
+                  <li>ausführliches Kennenlernen von Mensch und Hund</li>
+                  <li>Besprechung eurer bisherigen Erfahrungen und eurer aktuellen Situation</li>
+                  <li>Analyse alltäglicher Herausforderungen, Routinen und Auslöser</li>
+                  <li>Erfassung relevanter Hintergrundinformationen und Lebensumstände</li>
+                  <li>gemeinsame Zieldefinition und Erwartungen an die Zusammenarbeit</li>
+                  <li>individuelle Planung der weiteren Coaching- und Trainingsgestaltung</li>
+                </ul>
+                <p>
+                  Diese 90 Minuten schaffen die Basis für eine vertrauensvolle Zusammenarbeit und geben uns die Möglichkeit, die nächsten Schritte gezielt, individuell und nachhaltig zu planen, statt mit Standardlösungen zu arbeiten.
+                </p>
+                <div class="actions tab-actions">
+                  <a class="btn" href="#kontakt">Anamnese anfragen</a>
                 </div>
               </div>
-              <div class="tab-visual" aria-hidden="true">
-                <div class="visual-stat">
-                  <div><b>Alltag</b><span>Training da, wo Verhalten entsteht.</span></div>
-                  <div><b>Team</b><span>Mensch und Hund werden zusammen gedacht.</span></div>
-                  <div><b>Plan</b><span>Klare Schritte statt Bauchgefühl.</span></div>
-                  <div><b>Feedback</b><span>Verständlich, direkt und umsetzbar.</span></div>
+            </article>
+
+            <article class="tab-panel" role="tabpanel" id="panel-hund" aria-labelledby="tab-hund" data-panel="hund">
+              <div class="tab-content tab-content-wide">
+                <h3>Hundetraining mit Blick auf das ganze Team.</h3>
+                <p class="lead-line">
+                  Dein Hund ist einzigartig. Er bringt seine eigene Persönlichkeit, seine eigene Geschichte und seine ganz individuellen Bedürfnisse mit.
+                </p>
+                <p>
+                  Manchmal fühlt sich das Zusammenleben bereits leicht und harmonisch an. Und manchmal gibt es Situationen, die dich im Alltag herausfordern: dein Hund zieht an der Leine, reagiert unsicher, lässt sich schwer erreichen oder du wünschst dir einfach mehr Orientierung und Sicherheit im gemeinsamen Alltag.
+                </p>
+                <p>
+                  Genau hier setzt mein Hundetraining an. Es geht nicht darum, deinen Hund einfach „funktionieren“ zu lassen oder unerwünschtes Verhalten nur oberflächlich zu verändern. Vielmehr möchte ich dir helfen zu verstehen, warum dein Hund bestimmte Verhaltensweisen zeigt und wie ihr als Team gemeinsam neue Wege entwickeln könnt.
+                </p>
+                <p>
+                  Ich unterstütze dich dabei, die Kommunikation deines Hundes besser zu verstehen, seine Bedürfnisse wahrzunehmen und klare, faire Strukturen für euren Alltag aufzubauen. Nachhaltige Veränderung entsteht nicht durch einzelne Übungen allein, sondern durch Vertrauen, Verständnis und eine gute Zusammenarbeit zwischen dir und deinem Hund.
+                </p>
+                <h4>Mögliche Schwerpunkte können sein:</h4>
+                <ul class="detail-list">
+                  <li>Leinenführigkeit und entspannte Spaziergänge</li>
+                  <li>Orientierung am Menschen im Alltag</li>
+                  <li>Rückruf und zuverlässige Kommunikation</li>
+                  <li>Umgang mit Begegnungssituationen</li>
+                  <li>Beschäftigung und passende Auslastung</li>
+                  <li>Verständnis für Körpersprache und Ausdrucksverhalten</li>
+                  <li>Aufbau von Sicherheit und Vertrauen</li>
+                  <li>Unterstützung bei individuellen Alltagsthemen</li>
+                </ul>
+                <p>
+                  Zu Beginn schauen wir gemeinsam auf eure aktuelle Situation, eure bisherigen Erfahrungen und deine Ziele. Dabei entsteht kein Training nach einem festen Schema, sondern ein individueller Weg, der zu dir, deinem Hund und eurem Alltag passt.
+                </p>
+                <p>
+                  Gutes Hundetraining bedeutet nicht, einen perfekten Hund zu erschaffen. Es bedeutet, einander besser zu verstehen, gemeinsam zu wachsen und eine Verbindung aufzubauen, in der sich du und dein Hund sicher und wohlfühlen könnt.
+                </p>
+                <div class="actions tab-actions">
+                  <a class="btn" href="#kontakt">Hundetraining anfragen</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tab-panel" role="tabpanel" id="panel-mantrailing" aria-labelledby="tab-mantrailing" data-panel="mantrailing">
+              <div class="tab-content tab-content-wide">
+                <h3>Mantrailing – Nasenarbeit mit Köpfchen.</h3>
+                <p class="lead-line">
+                  Was wäre, wenn dein Hund genau das tun dürfte, worin er wirklich außergewöhnlich gut ist? Mit der Nase arbeiten.
+                </p>
+                <p>
+                  Beim Mantrailing folgt dein Hund dem individuellen Geruch einer bestimmten Person und sucht sie dort, wo sich ihr Geruch durch Wind, Untergrund und Umgebung verteilt hat. Konzentriert, selbstständig und mit beeindruckender Präzision.
+                </p>
+                <p>
+                  Dabei geht es nicht um Gehorsam, Schnelligkeit oder Perfektion. Es geht darum, als Team zusammenzuarbeiten, deinem Hund zu vertrauen und ihn in einer Aufgabe zu erleben, die ihn körperlich und vor allem geistig auslastet.
+                </p>
+                <p>
+                  Viele Hunde blühen beim Mantrailing regelrecht auf: unsichere Hunde gewinnen an Selbstvertrauen, aufgeregte Hunde lernen, ihre Energie sinnvoll einzusetzen, jagdlich motivierte Hunde dürfen ihre Nase gezielt nutzen und Mensch und Hund wachsen als Team zusammen.
+                </p>
+                <h4>So läuft das Training ab:</h4>
+                <ul class="detail-list">
+                  <li>Training in kleinen Gruppen mit maximal vier Mensch-Hund-Teams</li>
+                  <li>jeder Hund arbeitet seinen eigenen Trail und wird individuell begleitet</li>
+                  <li>wartende Teams profitieren vom Zuschauen, Mitdenken und gemeinsamen Lernen</li>
+                  <li>geeignet für Anfänger und erfahrene Spürhunde</li>
+                  <li>im Mittelpunkt stehen Freude, Nasenarbeit und wertschätzende Gemeinschaft</li>
+                </ul>
+                <p>
+                  Mantrailing bedeutet für mich auch Verbindung. Wir suchen nicht einfach irgendeine Person. Wir machen uns gemeinsam auf den Weg, jemanden zu finden. Jeder Trail erzählt eine kleine Geschichte vom Suchen, Vertrauen und Wiederfinden, und jede gefundene Versteckperson wird mit einem freudigen Wiedersehen belohnt.
+                </p>
+                <div class="actions tab-actions">
+                  <a class="btn" href="#kontakt">Mantrailing anfragen</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tab-panel" role="tabpanel" id="panel-betreuung" aria-labelledby="tab-betreuung" data-panel="betreuung">
+              <div class="tab-content tab-content-wide">
+                <h3>Bedürfnisorientierte Spaziergänge und Hundebetreuung.</h3>
+                <p class="lead-line">
+                  Gassiservice und Hundesitting für Entlastung im bunten Alltag.
+                </p>
+                <p>
+                  Manchmal lässt der Alltag nicht den Raum, den man seinem Hund eigentlich gerne geben möchte. Berufliche Verpflichtungen, Termine oder besondere Situationen können dazu führen, dass Unterstützung notwendig wird. Genau hier möchte ich euch begleiten: individuell, zuverlässig und mit einem Blick für die Bedürfnisse eures Hundes.
+                </p>
+                <p>
+                  Meine Betreuung findet nach Möglichkeit im vertrauten Umfeld eures Hundes statt. Viele Hunde profitieren davon, in ihrer gewohnten Umgebung bleiben zu dürfen und weiterhin bekannte Abläufe zu erleben.
+                </p>
+                <p>
+                  Ob ein entspannter Spaziergang, individuelle Betreuung vor Ort oder Unterstützung im Alltag: Jede Betreuung wird auf euren Hund, seine Bedürfnisse und eure Situation abgestimmt. Dabei geht es nicht nur darum, Zeit zu überbrücken. Es geht darum, deinem Hund Sicherheit, Bewegung und Aufmerksamkeit zu schenken, auch dann, wenn du einmal nicht selbst da sein kannst.
+                </p>
+                <h4>Je nach Bedarf kann die Betreuung umfassen:</h4>
+                <ul class="detail-list">
+                  <li>individuelle Gassigänge</li>
+                  <li>Betreuung bei dir zuhause</li>
+                  <li>Fütterung und Versorgung</li>
+                  <li>Beschäftigung und Alltagshilfe</li>
+                  <li>individuelle Betreuung im gewohnten Umfeld</li>
+                  <li>Berücksichtigung von Besonderheiten</li>
+                  <li>Rückmeldung während und nach jedem Termin</li>
+                  <li>Beobachtung von Veränderungen im Alltag</li>
+                </ul>
+                <p>
+                  Jeder Hund bringt seine eigene Geschichte, seine eigenen Bedürfnisse und sein eigenes Tempo mit. Genau das berücksichtige ich bei jeder Betreuung.
+                </p>
+                <div class="actions tab-actions">
+                  <a class="btn" href="#kontakt">Betreuung anfragen</a>
                 </div>
               </div>
             </article>
 
             <article class="tab-panel" role="tabpanel" id="panel-coaching" aria-labelledby="tab-coaching" data-panel="coaching">
-              <div class="tab-content">
-                <h3>Personal Coaching, das nicht nach Fitnessstudio klingt.</h3>
-                <p>
-                  Vielleicht wünschst du dir mehr Gelassenheit, mehr Klarheit und mehr Vertrauen in dich selbst und in euren gemeinsamen Weg. Genau dort setzt das Coaching an.
+              <div class="tab-content tab-content-wide">
+                <h3>Personal Coaching für Hundehalter.</h3>
+                <p class="lead-line">
+                  Du kennst das bestimmt: Manchmal hat der Tag einfach zu wenig Stunden.
                 </p>
                 <p>
-                  Auf Wunsch ergänzen wir das Coaching durch alltagsnahe Bewegungskonzepte oder individuelle Beratungen. Nicht als Pflichtprogramm, sondern als sinnvolle Unterstützung für mehr Wohlbefinden, Balance und gemeinsame Zeit.
-                </p>
-                <div class="offer-points">
-                  <div class="offer-point">Bewegung passend zu deinem Alltag</div>
-                  <div class="offer-point">Routinen, die entlasten statt überfordern</div>
-                  <div class="offer-point">Optional kombinierbar mit Hund und Outdoor-Zeit</div>
-                </div>
-              </div>
-              <div class="tab-visual" aria-hidden="true">
-                <div class="visual-stat">
-                  <div><b>Move</b><span>Bewegung passend zum Alltag.</span></div>
-                  <div><b>Mind</b><span>Motivation und Struktur.</span></div>
-                  <div><b>Flow</b><span>Routinen statt Druck.</span></div>
-                  <div><b>Balance</b><span>Mehr Ruhe und Klarheit.</span></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="tab-panel" role="tabpanel" id="panel-beratung" aria-labelledby="tab-beratung" data-panel="beratung">
-              <div class="tab-content">
-                <h3>Beratung – Klarheit, Wissen und sichere Entscheidungen.</h3>
-                <p>
-                  Manchmal steht man noch ganz am Anfang. Oder mitten im Prozess und merkt, dass Unsicherheit entsteht: Welche Trainingsmethoden sind sinnvoll? Was brauche ich in meinem Alltag wirklich? Oder welcher Hund passt überhaupt in mein Leben?
+                  Zwischen Arbeit, Terminen, Verpflichtungen und all den kleinen Dingen, die jeden Tag erledigt werden wollen, versucht man irgendwie alles zusammenzuhalten. Und mittendrin ist da noch dein Hund, mit seinen eigenen Bedürfnissen, seinem Wunsch nach Aufmerksamkeit und diesem besonderen Blick, der manchmal ziemlich deutlich sagt: Gemeinsame Zeit wäre jetzt wichtig.
                 </p>
                 <p>
-                  In einem persönlichen Gespräch nehmen wir uns Zeit für deine Fragen, deine Situation und deine Ziele. Dabei geht es nicht um schnelle Lösungen, sondern um verständliche, alltagstaugliche Orientierung.
+                  Ein Hund bereichert dein Leben unglaublich. Gleichzeitig bringt er Verantwortung, Veränderung und neue Herausforderungen mit sich. Genau hier kann Personal Coaching eine wertvolle Ergänzung zum Hundetraining sein.
                 </p>
-                <div class="offer-points">
-                  <div class="offer-point">Trainings- und Gesundheitsberatung</div>
-                  <div class="offer-point">Ernährung, Bewegung, Regeneration und Alltag</div>
-                  <div class="offer-point">Hundehaltung, Anschaffung und Vorbereitung</div>
-                </div>
-              </div>
-              <div class="tab-visual" aria-hidden="true">
-                <div class="visual-stat">
-                  <div><b>Check</b><span>Einordnung deiner Ausgangslage.</span></div>
-                  <div><b>Route</b><span>Nächster sinnvoller Schritt.</span></div>
-                  <div><b>Fit</b><span>Passendes Format finden.</span></div>
-                  <div><b>Clarity</b><span>Klarheit vor Entscheidung.</span></div>
+                <p>
+                  Denn manchmal geht es nicht nur darum, was dein Hund lernen soll. Manchmal geht es auch darum, wie dein Alltag gestaltet ist, welche Routinen dich unterstützen und was dir helfen kann, wieder mehr Sicherheit, Ruhe und Leichtigkeit im Zusammenleben mit deinem Hund zu finden.
+                </p>
+                <p>
+                  Gemeinsam betrachten wir deine aktuelle Situation, deine Herausforderungen und deine Ziele. Wir entwickeln alltagstaugliche Strategien und schauen, welche Veränderungen für dich und deinen Hund wirklich passend sind. Ohne Druck und ohne den Anspruch, alles perfekt machen zu müssen.
+                </p>
+                <p>
+                  Als Sportwissenschaftlerin und Hundetrainerin verbinde ich Wissen aus den Bereichen Bewegung, Gesundheit, Alltagsgestaltung und Hundeverhalten. Mein Ziel ist nicht, dir einen perfekten Alltag oder eine feste Lösung vorzugeben. Ich möchte dich dabei unterstützen, deinen eigenen Weg zu finden, für ein Zusammenleben mit deinem Hund, das sich nicht nur organisiert, sondern auch gut anfühlt.
+                </p>
+                <h4>Mögliche Schwerpunkte können sein:</h4>
+                <ul class="detail-list">
+                  <li>Entwicklung gesunder und alltagstauglicher Routinen</li>
+                  <li>Integration von Bewegung und Aktivität in deinen Alltag mit Hund</li>
+                  <li>mehr Sicherheit und Klarheit im Umgang mit deinem Hund</li>
+                  <li>besseres Verständnis für Kommunikation, Körpersprache und Ausdrucksverhalten</li>
+                  <li>Unterstützung bei Veränderungen und neuen Herausforderungen</li>
+                  <li>Entwicklung von Strukturen, die zu deinem Leben passen</li>
+                  <li>Begleitung vor dem Einzug eines Hundes und Vorbereitung auf den gemeinsamen Start</li>
+                </ul>
+                <p>
+                  Am Ende geht es nicht darum, alles gleichzeitig perfekt zu machen. Es geht darum, gemeinsam mit deinem Hund einen Alltag zu gestalten, in dem ihr beide euch wohlfühlt.
+                </p>
+                <div class="actions tab-actions">
+                  <a class="btn" href="#kontakt">Personal Coaching anfragen</a>
                 </div>
               </div>
             </article>
           </div>
         </div>
       </section>
+
 
       <section class="section" id="ueber-mich">
-        <div class="container about-grid">
-          <div class="about-card">
-            <div class="portrait-placeholder">
-              <div class="portrait-note">
-                <strong>Bildplatzhalter</strong>
-                <span>Hier später ein echtes Foto von Nelly mit Hund einsetzen. Das wirkt deutlich vertrauenswürdiger als Stockfotos.</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-card about-copy">
-            <span class="eyebrow">Über Nelly</span>
-            <h2>Nelly Philipp</h2>
-            <p>
-              Ich begleite Menschen und Hunde dabei, sich gegenseitig besser zu verstehen, klarer zu kommunizieren und wieder mehr Sicherheit in ihren Alltag zu bringen. Mein Ansatz verbindet Empathie mit Struktur: ruhig, ehrlich, lösungsorientiert und immer mit Blick auf das, was im echten Leben machbar ist.
-            </p>
-            <p>
-              MoveMates steht für Bewegung, Verbindung und Entwicklung. Ob Hundetraining, Personal Coaching, Beratung oder Betreuung: Im Mittelpunkt steht nicht Perfektion, sondern ein Weg, der zu dir, deinem Hund und eurem Alltag passt.
-            </p>
-            <div class="facts-grid">
-              <div class="fact">
-                <strong>Arbeitsweise</strong>
-                <span>Individuell, klar, freundlich und alltagstauglich.</span>
-              </div>
-              <div class="fact">
-                <strong>Fokus</strong>
-                <span>Beziehung, Orientierung, Routine und nachhaltige Veränderung.</span>
-              </div>
-              <div class="fact">
-                <strong>Format</strong>
-                <span>Mobil unterwegs, draußen, bei dir oder nach Absprache.</span>
-              </div>
-              <div class="fact">
-                <strong>Passend für</strong>
-                <span>Menschen, Hunde und Teams, die ehrliche Begleitung suchen.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="termin">
         <div class="container">
           <div class="section-head">
             <div>
-              <span class="eyebrow">Termin buchen</span>
-              <h2>Erst anfragen, dann passend starten.</h2>
+              <span class="eyebrow">Über mich</span>
+              <h2>Fachwissen, Ruhe und ein Blick fürs ganze Team.</h2>
             </div>
             <p>
-              Schreib kurz, worum es geht. Danach klären wir gemeinsam, welches Format zu deiner Situation passt und wie der nächste sinnvolle Schritt aussehen kann.
+              Bei MoveMates geht es nicht um schnelle Standardlösungen, sondern um verständliche Begleitung für Mensch und Hund: fachlich fundiert, alltagsnah und mit viel Empathie.
+            </p>
+          </div>
+
+          <div class="about-showcase">
+            <div class="about-photo-card">
+              <img class="about-photo" src="assets/uebermich.jpg" alt="Nele Kristin Philipp mit Hund im Wald" style="object-position: 90% center;">
+              <div class="about-photo-badge">
+                <strong>Mobil unterwegs in Paderborn & Umgebung</strong>
+                <span>Training und Beratung dort, wo euer Alltag wirklich stattfindet.</span>
+              </div>
+            </div>
+
+            <div class="about-card about-copy about-copy-elevated">
+              <h2>Nelly Philipp</h2>
+              <p>
+                Ich begleite Menschen und Hunde dabei, sich gegenseitig besser zu verstehen, klarer zu kommunizieren und wieder mehr Sicherheit in ihren Alltag zu bringen. Mein Ansatz verbindet fundiertes Fachwissen mit einem ruhigen, ehrlichen und lösungsorientierten Blick auf das, was im echten Leben machbar ist.
+              </p>
+              <p>
+                Als Sportwissenschaftlerin und Hundetrainerin verbinde ich Wissen aus Bewegung, Gesundheit, Verhalten, Lernen und Alltagsgestaltung. Dadurch betrachte ich nicht nur einzelne Situationen, sondern das gesamte Mensch-Hund-Team: eure Routinen, eure Bedürfnisse, eure Ziele und die kleinen Stellschrauben, die langfristig wirklich etwas verändern können.
+              </p>
+              <p>
+                MoveMates steht für Bewegung, Verbindung und Entwicklung. Im Mittelpunkt steht nicht Perfektion, sondern ein Weg, der zu dir, deinem Hund und eurem Alltag passt.
+              </p>
+
+              <div class="facts-grid facts-grid-about">
+                <div class="fact">
+                  <strong>Arbeitsweise</strong>
+                  <span>Individuell, ruhig, klar und alltagstauglich.</span>
+                </div>
+                <div class="fact">
+                  <strong>Fokus</strong>
+                  <span>Verständnis, Beziehung, Orientierung und nachhaltige Veränderung.</span>
+                </div>
+                <div class="fact">
+                  <strong>Format</strong>
+                  <span>Mobil, draußen, bei dir vor Ort oder nach Absprache.</span>
+                </div>
+                <div class="fact">
+                  <strong>Haltung</strong>
+                  <span>Ohne Druck, ohne Bewertung, mit ehrlichem Blick für euch als Team.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="credentials-block" aria-label="Qualifikationen und Nachweise">
+            <div class="credentials-intro">
+              <div>
+                <span class="eyebrow">Qualifikationen</span>
+                <h3>Nachweise, die Vertrauen schaffen.</h3>
+              </div>
+              <p>
+                Die wichtigsten fachlichen und behördlichen Nachweise sind vorhanden. Aus Datenschutzgründen werden sensible Originaldokumente nicht ungeschwärzt auf der Website veröffentlicht, können aber bei Bedarf eingesehen werden.
+              </p>
+            </div>
+
+            <div class="credential-grid">
+              <article class="credential-card credential-card-featured">
+                <span>Behördliche Erlaubnis</span>
+                <h4>§ 11 TierSchG</h4>
+                <p>Erlaubnis des Kreises Paderborn für mobiles Hundetraining gemäß § 11 Abs. 1 Nr. 8 f TierSchG.</p>
+                <small>Kreis Paderborn, 2026</small>
+              </article>
+
+              <article class="credential-card">
+                <span>Ausbildung</span>
+                <h4>Hundetrainerin</h4>
+                <p>Praktisch-mündliche Abschlussprüfung zur Hundetrainerin mit Theorie- und Praxisanteilen.</p>
+                <small>ATN, 2025</small>
+              </article>
+
+              <article class="credential-card">
+                <span>Fachwissen Hund</span>
+                <h4>Hundewissenschaften</h4>
+                <p>Fernlehrgang mit Schwerpunkten wie Ethologie, Verhalten, Haltung, Erziehung, Gesundheit und Beschäftigung.</p>
+                <small>ATN, 2024</small>
+              </article>
+
+              <article class="credential-card">
+                <span>Studium</span>
+                <h4>Applied Neurosciences in Sports & Exercise</h4>
+                <p>Masterabschluss mit sportwissenschaftlichem und gesundheitsbezogenem Hintergrund.</p>
+                <small>Universität Paderborn, 2022</small>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Kontakt</span>
+              <h2>Kontakt aufnehmen. Gemeinsam den passenden Start finden.</h2>
+            </div>
+            <p>
+              Du möchtest wissen, welches Angebot zu euch passt? Schreib kurz, worum es geht. Deine Anfrage ist unverbindlich und wird nicht automatisch als Terminbuchung verstanden.
             </p>
           </div>
 
           <div class="booking-grid">
             <aside class="booking-aside">
-              <h3>So läuft es ab</h3>
-              <p>Schreib kurz, worum es geht. Nelly meldet sich zurück und klärt, welches Format sinnvoll ist.</p>
+              <h3>Kontaktmöglichkeiten</h3>
+              <p>Du kannst deine Anfrage über das Formular vorbereiten oder direkt per E-Mail Kontakt aufnehmen. Ich melde mich und bespreche mit dir, welches Format sinnvoll für dich ist.</p>
               <div class="booking-card">
-                <strong>Empfohlener Start</strong>
-                <span>20 Minuten Kennenlernen, Ziel klären, nächsten Schritt abstimmen.</span>
+                <strong>Unverbindlich anfragen</strong>
+                <span>Deine Nachricht ist keine automatische Terminbuchung. Erst nach Rückmeldung wird gemeinsam abgestimmt, wie es weitergeht.</span>
               </div>
               <a class="contact-line" href="tel:+4915259702372"><i>☎</i><span>0152 59702372</span></a>
               <a class="contact-line" href="mailto:info@move-mates.de"><i>@</i><span>info@move-mates.de</span></a>
@@ -1846,7 +1875,7 @@
             </aside>
 
             <form class="booking-form" id="bookingForm">
-              <h3>Unverbindliche Anfrage</h3>
+              <h3>Kontaktanfrage</h3>
               <div class="form-grid">
                 <div class="field">
                   <label for="name">Name</label>
@@ -1860,9 +1889,11 @@
                   <label for="topic">Thema</label>
                   <select id="topic" name="topic" required>
                     <option value="">Bitte auswählen</option>
+                    <option>Anamnese Mensch-Hund-Team</option>
                     <option>Hundetraining</option>
+                    <option>Mantrailing</option>
+                    <option>Betreuung</option>
                     <option>Personal Coaching</option>
-                    <option>Betreuung & Beratung</option>
                     <option>Noch unsicher</option>
                   </select>
                 </div>
@@ -1872,102 +1903,63 @@
                 </div>
                 <div class="field full">
                   <label for="message">Worum geht es?</label>
-                  <textarea id="message" name="message" required placeholder="Beschreibe kurz deine Situation, dein Ziel und wann du grundsätzlich Zeit hättest."></textarea>
+                  <textarea id="message" name="message" required placeholder="Beschreibe kurz deine Situation, dein Anliegen und wobei du dir Unterstützung wünschst."></textarea>
                 </div>
               </div>
               <div class="actions" style="margin-top: 1rem;">
-                <button class="btn" type="submit">Anfrage per Mail erstellen</button>
-                <a class="btn secondary" href="mailto:info@move-mates.de?subject=MoveMates%20Anfrage">Direkt mailen</a>
+                <button class="btn" type="submit">Anfrage per E-Mail erstellen</button>
+                <a class="btn secondary" href="mailto:info@move-mates.de?subject=MoveMates%20Anfrage">Direkt E-Mail schreiben</a>
               </div>
               <p class="form-note">
-                Mit dem Absenden öffnet sich dein E-Mail-Programm mit einer vorbereiteten Nachricht an MoveMates. Du kannst die Nachricht vor dem Versand noch prüfen und ergänzen.
+                Mit dem Button wird eine vorbereitete E-Mail an MoveMates erstellt. Du kannst die Nachricht vor dem Versand noch prüfen, ergänzen oder abbrechen.
               </p>
             </form>
           </div>
         </div>
       </section>
 
-      <section class="section" aria-label="Grundsätze">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <span class="eyebrow">Grundsätze</span>
-              <h2>Woran sich die Arbeit von MoveMates orientiert.</h2>
-            </div>
-            <p>
-              Vertrauen entsteht nicht durch große Versprechen, sondern durch klare Haltung, ehrliche Einschätzung und Schritte, die wirklich in den Alltag passen.
-            </p>
-          </div>
-          <div class="testimonials">
-            <article class="quote-card">
-              <p>„Ohne Druck. Veränderung darf in deinem Tempo entstehen und muss nicht laut oder perfekt sein.“</p>
-              <div class="quote-author"><strong>Verständnis statt Perfektion</strong><span>echt und alltagsnah</span></div>
-            </article>
-            <article class="quote-card">
-              <p>„Wissen soll Sicherheit geben. Deshalb wird verständlich erklärt, was sinnvoll ist und warum es zu deiner Situation passt.“</p>
-              <div class="quote-author"><strong>Klarheit statt Fachchinesisch</strong><span>praxisnah und ehrlich</span></div>
-            </article>
-            <article class="quote-card">
-              <p>„Mensch und Hund werden gemeinsam betrachtet. Denn nachhaltige Veränderung entsteht dort, wo beide Seiten wachsen dürfen.“</p>
-              <div class="quote-author"><strong>Gemeinsam wachsen</strong><span>für Mensch und Hund</span></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
+      
+      <!--
       <section class="section" id="faq">
         <div class="container">
           <div class="section-head">
             <div>
               <span class="eyebrow">FAQ</span>
-              <h2>Fragen, die vor dem ersten Termin oft entstehen.</h2>
+              <h2>Fragen, die vor der ersten Anfrage oft entstehen.</h2>
             </div>
-            <p>Kurze Antworten nehmen Unsicherheit raus und helfen dir einzuschätzen, ob MoveMates zu deiner Situation passt.</p>
+            <p>Kurze Antworten nehmen Unsicherheit raus und helfen dir einzuschätzen, ob MoveMates zu deiner Situation passt, bevor du Kontakt aufnimmst.</p>
           </div>
 
           <div class="faq-list">
             <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">Womit startet die Zusammenarbeit?</button>
+              <div class="faq-answer">Der beste Start ist die Anamnese Mensch-Hund-Team. In 90 Minuten werden Alltag, Umfeld, Erfahrungen, Herausforderungen und Ziele besprochen. Daraus entsteht die Grundlage für Training, Coaching oder Betreuung.</div>
+            </article>
+            <article class="faq-item">
               <button class="faq-question" type="button" aria-expanded="false">Wo findet das Training statt?</button>
               <div class="faq-answer">Je nach Thema draußen, bei dir im Alltag oder an einem passenden Treffpunkt. Der konkrete Ort wird nach der Anfrage abgestimmt.</div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">Ist Mantrailing auch für Anfänger geeignet?</button>
+              <div class="faq-answer">Ja. Mantrailing eignet sich für Anfänger und erfahrene Mensch-Hund-Teams. Jeder Hund arbeitet seinen eigenen Trail und wird individuell begleitet.</div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">Kann ich Betreuung einzeln anfragen?</button>
+              <div class="faq-answer">Ja. Gassiservice und Hundebetreuung können nach Absprache individuell angefragt werden. Wichtig ist, dass Bedarf, Hund, Umfeld und Besonderheiten vorher gut besprochen werden.</div>
             </article>
             <article class="faq-item">
               <button class="faq-question" type="button" aria-expanded="false">Kann ich mich beraten lassen, bevor ich einen Hund aufnehme?</button>
               <div class="faq-answer">Ja. Gerade vor der Anschaffung ist eine ehrliche Einschätzung sinnvoll. Gemeinsam schauen wir, welcher Hund zu deinem Alltag, deiner Persönlichkeit und deinen Möglichkeiten passt.</div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">Geht es in der Beratung auch um Training, Ernährung und Gesundheit?</button>
-              <div class="faq-answer">Ja. Die Beratung kann auch Fragen zu Bewegung, Regeneration, Ernährung und realistischen Trainingsplänen umfassen. Ziel ist mehr Sicherheit für langfristige Entscheidungen.</div>
-            </article>
-            <article class="faq-item">
               <button class="faq-question" type="button" aria-expanded="false">Ist das Personal Coaching auch für Anfänger geeignet?</button>
-              <div class="faq-answer">Ja. Der Ansatz startet dort, wo du gerade stehst. Es geht nicht um Leistung um jeden Preis, sondern um nachhaltige Bewegung, Routinen und Wohlbefinden.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">Muss ich direkt ein großes Paket buchen?</button>
-              <div class="faq-answer">Nein. Der erste Schritt ist eine unverbindliche Anfrage. Danach wird gemeinsam geklärt, welches Format sinnvoll ist und ob Einzeltermine, Betreuung oder eine längere Begleitung besser passen.</div>
+              <div class="faq-answer">Ja. Der Ansatz startet dort, wo du gerade stehst. Es geht nicht um Leistung um jeden Preis, sondern um nachhaltige Bewegung, Routinen, Klarheit und Wohlbefinden.</div>
             </article>
           </div>
         </div>
       </section>
-
-      <section class="section contact-section" id="kontakt">
-        <div class="container contact-panel">
-          <div>
-            <span class="eyebrow">Kontakt</span>
-            <h2>Bereit für den nächsten Schritt?</h2>
-            <p>
-              Melde dich kurz mit deinem Thema. MoveMates ist flexibel für dich unterwegs und findet gemeinsam mit dir den Startpunkt, der zu deinem Alltag passt.
-            </p>
-            <div class="actions">
-              <a class="btn" href="#termin">Anfrage senden</a>
-              <a class="btn secondary" href="mailto:info@move-mates.de">info@move-mates.de</a>
-            </div>
-          </div>
-          <div class="contact-image">
-            <img src="assets/contact-card.jpg" alt="MoveMates Kontaktinformationen Visitenkarte">
-          </div>
-        </div>
-      </section>
+      -->
+      
     </main>
 
     <footer class="footer">
@@ -1976,6 +1968,7 @@
         <div class="footer-links">
           <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
           <a href="#start">Nach oben</a>
         </div>
       </div>
@@ -2026,6 +2019,16 @@
       button.addEventListener('click', () => activateTab(button.dataset.tab));
     });
 
+    const jumpCards = [...document.querySelectorAll('[data-jump-tab]')];
+    jumpCards.forEach(card => {
+      card.addEventListener('click', event => {
+        event.preventDefault();
+        const targetTab = card.dataset.jumpTab;
+        activateTab(targetTab);
+        document.getElementById('details')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    /*
     const faqButtons = [...document.querySelectorAll('.faq-question')];
     faqButtons.forEach(button => {
       button.addEventListener('click', () => {
@@ -2035,7 +2038,7 @@
         answer.classList.toggle('is-open', !isOpen);
       });
     });
-
+    */
     const bookingForm = document.getElementById('bookingForm');
     bookingForm?.addEventListener('submit', event => {
       event.preventDefault();
@@ -2053,7 +2056,7 @@
 
       const subject = encodeURIComponent(`MoveMates Anfrage: ${topic}`);
       const body = encodeURIComponent(
-        `Hallo Nelly,\n\nich möchte gerne einen Termin anfragen.\n\n` +
+        `Hallo Nelly,\n\nich möchte gerne Kontakt aufnehmen.\n\n` +
         `Name: ${name}\n` +
         `E-Mail: ${email}\n` +
         `Telefon: ${phone || '-'}\n` +
