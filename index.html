@@ -768,23 +768,6 @@
 
     .about-copy p { color: var(--muted); line-height: 1.75; font-size: 1.03rem; }
 
-    .facts-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: .8rem;
-      margin-top: 1.2rem;
-    }
-
-    .fact {
-      padding: 1rem;
-      border-radius: 22px;
-      background: rgba(95,124,54,.08);
-      border: 1px solid rgba(95,124,54,.12);
-    }
-
-    .fact strong { display:block; letter-spacing:-.03em; margin-bottom:.25rem; }
-    .fact span { color: var(--muted); line-height: 1.45; font-size:.92rem; }
-
 
     .about-showcase {
       display: grid;
@@ -854,10 +837,6 @@
       padding: clamp(1.4rem, 3vw, 2rem);
     }
 
-    .facts-grid-about .fact {
-      background: rgba(95,124,54,.075);
-    }
-
     .credentials-block {
       margin-top: 1rem;
       padding: clamp(1.25rem, 3vw, 2rem);
@@ -892,7 +871,7 @@
 
     .credential-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: .85rem;
     }
 
@@ -1295,7 +1274,6 @@
         width: 100%;
         transform: none;
       }
-      .facts-grid,
       .form-grid { grid-template-columns: 1fr; }
       .portrait-placeholder { min-height: 430px; }
       .tab-visual { min-height: 260px; }
@@ -1783,26 +1761,8 @@
               <p>
                 MoveMates steht für Bewegung, Verbindung und Entwicklung. Im Mittelpunkt steht nicht Perfektion, sondern ein Weg, der zu dir, deinem Hund und eurem Alltag passt.
               </p>
-
-              <div class="facts-grid facts-grid-about">
-                <div class="fact">
-                  <strong>Arbeitsweise</strong>
-                  <span>Individuell, ruhig, klar und alltagstauglich.</span>
-                </div>
-                <div class="fact">
-                  <strong>Fokus</strong>
-                  <span>Verständnis, Beziehung, Orientierung und nachhaltige Veränderung.</span>
-                </div>
-                <div class="fact">
-                  <strong>Format</strong>
-                  <span>Mobil, draußen, bei dir vor Ort oder nach Absprache.</span>
-                </div>
-                <div class="fact">
-                  <strong>Haltung</strong>
-                  <span>Ohne Druck, ohne Bewertung, mit ehrlichem Blick für euch als Team.</span>
-                </div>
-              </div>
             </div>
+          </div>
           </div>
 
           <div class="credentials-block" aria-label="Qualifikationen und Nachweise">
@@ -1811,9 +1771,6 @@
                 <span class="eyebrow">Qualifikationen</span>
                 <h3>Nachweise, die Vertrauen schaffen.</h3>
               </div>
-              <p>
-                Die wichtigsten fachlichen und behördlichen Nachweise sind vorhanden. Aus Datenschutzgründen werden sensible Originaldokumente nicht ungeschwärzt auf der Website veröffentlicht, können aber bei Bedarf eingesehen werden.
-              </p>
             </div>
 
             <div class="credential-grid">
@@ -1822,13 +1779,6 @@
                 <h4>§ 11 TierSchG</h4>
                 <p>Behördliche Erlaubnis gemäß § 11 Abs. 1 Nr. 8 f TierSchG zur gewerbsmäßigen Anleitung von Hundehalterinnen und Hundehaltern bei der Ausbildung ihrer Hunde.</p>
                 <small>Kreis Paderborn, 2026</small>
-              </article>
-
-              <article class="credential-card">
-                <span>Ausbildung</span>
-                <h4>Hundetrainerin</h4>
-                <p>Praktisch-mündliche Abschlussprüfung zur Hundetrainerin mit Theorie- und Praxisanteilen.</p>
-                <small>ATN, 2025</small>
               </article>
 
               <article class="credential-card">
@@ -1864,14 +1814,15 @@
           <div class="booking-grid">
             <aside class="booking-aside">
               <h3>Kontaktmöglichkeiten</h3>
-              <p>Du kannst deine Anfrage über das Formular vorbereiten oder direkt per E-Mail Kontakt aufnehmen. Ich melde mich und bespreche mit dir, welches Format sinnvoll für dich ist.</p>
+              <p>Du kannst deine Anfrage über das Formular vorbereiten oder mich direkt per Telefon, WhatsApp oder E-Mail kontaktieren. Ich melde mich und bespreche mit dir, welches Format für dich sinnvoll ist.</p>
               <div class="booking-card">
                 <strong>Unverbindlich anfragen</strong>
                 <span>Deine Nachricht ist keine automatische Terminbuchung. Erst nach Rückmeldung wird gemeinsam abgestimmt, wie es weitergeht.</span>
               </div>
               <a class="contact-line" href="tel:+4915259702372"><i>☎</i><span>0152 59702372</span></a>
+              <a class="contact-line" href="https://wa.me/4915259702372?text=Hallo%20Nelly%2C%20ich%20habe%20eine%20Frage%20zu%20MoveMates." target="_blank" rel="noopener noreferrer" aria-label="MoveMates per WhatsApp kontaktieren"><i aria-hidden="true">◉</i><span>WhatsApp-Nachricht schreiben</span></a>
               <a class="contact-line" href="mailto:info@move-mates.de"><i>@</i><span>info@move-mates.de</span></a>
-              <a class="contact-line" href="https://www.move-mates.de"><i>↗</i><span>www.move-mates.de</span></a>
+              <a class="contact-line" href="https://www.move-mates.de" target="_blank" rel="noopener noreferrer"><i aria-hidden="true">↗</i><span>www.move-mates.de</span></a>
             </aside>
 
             <form class="booking-form" id="bookingForm">
